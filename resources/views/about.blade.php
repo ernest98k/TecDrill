@@ -9,17 +9,17 @@
       <div class="row">
         <div class="col-md-12 col-lg-8">
           <div class="title-single-box">
-            <h1 class="title-single">We Do Great Design For Creative Folks</h1>
+            <h1 class="title-single">Quem somos nós ?</h1>
           </div>
         </div>
         <div class="col-md-12 col-lg-4">
           <nav aria-label="breadcrumb" class="breadcrumb-box d-flex justify-content-lg-end">
             <ol class="breadcrumb">
               <li class="breadcrumb-item">
-                <a href="#">Home</a>
+                <a href="#">Inicio</a>
               </li>
               <li class="breadcrumb-item active" aria-current="page">
-                About
+                Sobre
               </li>
             </ol>
           </nav>

@@ -1415,7 +1415,7 @@ a:hover {
 }
 
 .sinse-box {
-  background-color: #29abe2;
+  background-color: #4fa9cfa9;
   padding: 1rem 2rem;
   position: absolute;
   left: 15px;
@@ -1933,7 +1933,7 @@ footer .credits {
   }
 
   .sinse-box {
-    padding: 3rem 4.5rem;
+    padding: 2rem 3.5rem;
   }
 
   .sinse-box .sinse-title {

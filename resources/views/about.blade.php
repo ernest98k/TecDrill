@@ -35,19 +35,19 @@
       <div class="row">
         <div class="col-sm-12">
           <div class="about-img-box">
-            <img src="img/slide-about-1.jpg" alt="" class="img-fluid">
+            <img src="img/tec4.jpg" alt="" class="img-fluid">
           </div>
           <div class="sinse-box">
-            <h3 class="sinse-title">EstateAgency
+            <h3 class="sinse-title">TecDrill
               <span></span>
-              <br> Sinse 2017</h3>
-            <p>Art & Creative</p>
+              <br> Desde 2017</h3>
+            <p>Produção & Reconstrução</p>
           </div>
         </div>
         <div class="col-md-12 section-t8">
           <div class="row">
             <div class="col-md-6 col-lg-5">
-              <img src="img/about-2.jpg" alt="" class="img-fluid">
+              <img src="img/tec8.jpg" alt="" class="img-fluid">
             </div>
             <div class="col-lg-2  d-none d-lg-block">
               <div class="title-vertical d-flex justify-content-start">

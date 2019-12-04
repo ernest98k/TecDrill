@@ -186,7 +186,10 @@
             </div>
             <div class="w-body-a">
               <p class="w-text-a color-text-a">
-              A Tecdrill é uma empresa que se dedica à produção, reconstrução e comercialização de brocas canhão adaptadas às exigências do mercado atual. 
+              .A Tecdrill é uma empresa que se dedica à produção, reconstrução e comercialização de brocas canhão adaptadas às exigências do mercado atual. 
+Comercializamos as ferramentas de corte da marca ZPS-FN e de roscagem da marca BOCCASSINI para Portugal..A Tecdrill é uma empresa que se dedica à produção, reconstrução e comercialização de brocas canhão adaptadas às exigências do mercado atual. 
+Comercializamos as ferramentas de corte da marca ZPS-FN e de roscagem da marca BOCCASSINI para Portugal..A Tecdrill é uma empresa que se dedica à produção, reconstrução e comercialização de brocas canhão adaptadas às exigências do mercado atual. 
+Comercializamos as ferramentas de corte da marca ZPS-FN e de roscagem da marca BOCCASSINI para Portugal..A Tecdrill é uma empresa que se dedica à produção, reconstrução e comercialização de brocas canhão adaptadas às exigências do mercado atual. 
 Comercializamos as ferramentas de corte da marca ZPS-FN e de roscagem da marca BOCCASSINI para Portugal.
               </p>
             </div>

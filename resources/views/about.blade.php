@@ -51,27 +51,21 @@
             </div>
             <div class="col-lg-2  d-none d-lg-block">
               <div class="title-vertical d-flex justify-content-start">
-                <span>EstateAgency Exclusive Property</span>
+                <span>Conheça-nos..</span>
               </div>
             </div>
             <div class="col-md-6 col-lg-5 section-md-t3">
               <div class="title-box-d">
-                <h3 class="title-d">Sed
-                  <span class="color-d">porttitor</span> lectus
-                  <br> nibh.</h3>
+                <h3 class="title-d">Quem
+                  <span class="color-d">somos</span>?</h3>
               </div>
               <p class="color-text-a">
-                Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Vivamus magna justo, lacinia eget
-                consectetur sed, convallis
-                at tellus. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Vestibulum
-                ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit
-                neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula.
+              A Tecdrill é uma empresa que se dedica à produção, reconstrução e comercialização de brocas canhão adaptadas às exigências do mercado atual. 
+              Comercializamos as ferramentas de corte da marca ZPS-FN e de roscagem da marca BOCCASSINI para Portugal.
               </p>
               <p class="color-text-a">
-                Sed porttitor lectus nibh. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus.
-                Mauris blandit aliquet
-                elit, eget tincidunt nibh pulvinar a. Vivamus magna justo, lacinia eget consectetur sed,
-                convallis at tellus.
+                Produzimos essencialmente brocas canhão normais, revestidas e de ponteira extra-longa com diâmetros variáveis também produzimos brocas canhão com pastilha intercambíavel e afiamos.
+                Atuamos também no serviço de reconstrução das brocas saiba mais na nossa página de Serviços.
               </p>
             </div>
           </div>
@@ -88,7 +82,7 @@
         <div class="col-md-12">
           <div class="title-wrap d-flex justify-content-between">
             <div class="title-box">
-              <h2 class="title-a">Meet Our Team</h2>
+              <h2 class="title-a">A Nossa Equipa..</h2>
             </div>
           </div>
         </div>

@@ -1,5 +1,5 @@
 @extends("layout.master")
-
+@section("title","Opiniões")
 @section('content')
 
 <section class="intro-single">
@@ -36,98 +36,94 @@
         <div class="news-img-box">
           <img src="img/tec2.jpg" alt="" class="img-fluid">
         </div>
-      </div>
+
 
       <div class="form-comments">
         <div class="title-box-d"><br><br>
-          <h3 class="title-d"> Leave a Reply</h3>
+          <h3 class="title-d"> Opiniões</h3>
         </div>
         <form class="form-a">
           <div class="row">
             <div class="col-md-6 mb-3">
               <div class="form-group">
-                <label for="inputName">Enter name</label>
-                <input type="text" class="form-control form-control-lg form-control-a" id="inputName" placeholder="Name *"
+                <label for="inputName">Nome Completo</label>
+                <input type="text" class="form-control form-control-lg form-control-a" id="inputName" placeholder="Nome Completo *"
                   required>
               </div>
             </div>
             <div class="col-md-6 mb-3">
               <div class="form-group">
-                <label for="inputEmail1">Enter email</label>
+                <label for="inputEmail1">Email</label>
                 <input type="email" class="form-control form-control-lg form-control-a" id="inputEmail1"
                   placeholder="Email *" required>
               </div>
             </div>
             <div class="col-md-12 mb-3">
               <div class="form-group">
-                <label for="inputUrl">Enter website</label>
-                <input type="url" class="form-control form-control-lg form-control-a" id="inputUrl" placeholder="Website">
-              </div>
-            </div>
-            <div class="col-md-12 mb-3">
-              <div class="form-group">
-                <label for="textMessage">Enter message</label>
-                <textarea id="textMessage" class="form-control" placeholder="Comment *" name="message" cols="45"
+                <label for="textMessage">Opinião</label>
+                <textarea id="textMessage" class="form-control" placeholder="Deixe aqui a sua opinião *" name="message" cols="45"
                   rows="8" required></textarea>
               </div>
             </div>
             <div class="col-md-12">
-              <button type="submit" class="btn btn-a">Send Message</button>
+              <center><button type="submit" class="btn btn-a">Enviar </button></center>
             </div>
           </div>
         </form>
       </div>
 
+      <br>
 
+      </div>
       <div class="col-md-10 offset-md-1 col-lg-10 offset-lg-1">
         <div class="title-box-d"><br><br>
-          <h3 class="title-d">Comments (4)</h3>
+          <h3 class="title-d">Opiniões dos nossos clientes (3)</h3>
         </div>
         <div class="box-comments">
           <ul class="list-comments">
             <li>
               <div class="comment-avatar">
-                <img src="img/author-2.jpg" alt="">
+                <img src="img/img1.jpg" alt="">
               </div>
               <div class="comment-details">
-                <h4 class="comment-author">Emma Stone</h4>
-                <span>18 Sep 2017</span>
+                <h4 class="comment-author">Ricardo Morais</h4>
+                <span>03 Dec 2019</span>
                 <p class="comment-description">
                   Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores reprehenderit, provident cumque
                   ipsam temporibus maiores
                   quae natus libero optio, at qui beatae ducimus placeat debitis voluptates amet corporis.
                 </p>
-                <a href="3">Reply</a>
-              </div>
-            </li>
-            <li class="comment-children">
-              <div class="comment-avatar">
-                <img src="img/author-1.jpg" alt="">
-              </div>
-              <div class="comment-details">
-                <h4 class="comment-author">Oliver Colmenares</h4>
-                <span>18 Sep 2017</span>
-                <p class="comment-description">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores reprehenderit, provident cumque
-                  ipsam temporibus maiores
-                  quae.
-                </p>
-                <a href="3">Reply</a>
+                <!-- <a href="3">Reply</a> -->
               </div>
             </li>
             <li>
               <div class="comment-avatar">
-                <img src="img/author-2.jpg" alt="">
+                <img src="img/img2.jpg" alt="">
               </div>
               <div class="comment-details">
-                <h4 class="comment-author">Emma Stone</h4>
-                <span>18 Sep 2017</span>
+                <h4 class="comment-author">Alexandre Elias</h4>
+                <span>28 Nov 2019</span>
                 <p class="comment-description">
                   Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores reprehenderit, provident cumque
                   ipsam temporibus maiores
                   quae natus libero optio.
                 </p>
-                <a href="3">Reply</a>
+                <!-- <a href="3">Reply</a> -->
+              </div>
+            </li>
+            <li>
+              <div class="comment-avatar">
+                <img src="img/img3.jpg" alt="">
+              </div>
+              <div class="comment-details">
+                <h4 class="comment-author">Diogo João P</h4>
+                <span>01 Dec 2019</span>
+                <p class="comment-description">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores reprehenderit, provident cumque
+                  ipsam temporibus maiores
+                  quae natus libero optio.
+                </p>
+                <!-- <a href="3">Reply</a> -->
               </div>
             </li>
           </ul>

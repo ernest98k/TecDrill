@@ -148,7 +148,7 @@
       <div class="navbar-collapse collapse justify-content-center" id="navbarDefault">
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link active" href="{{route("index")}}">Inicio</a>
+            <a class="nav-link" href="{{route("index")}}">Inicio</a><!--active-->
           </li>
           <li class="nav-item">
             <a class="nav-link" href="{{route("about")}}">Sobre</a>

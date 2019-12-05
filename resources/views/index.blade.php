@@ -104,13 +104,13 @@
                 <h2 class="title-c">Produção</h2>
               </div>
             </div>
-            <div class="card-body-c">
+            <!-- <div class="card-body-c">
               <p class="content-c">
                 Sed porttitor lectus nibh. Cras ultricies ligula sed magna dictum porta. Praesent sapien massa,
                 convallis a pellentesque
                 nec, egestas non nisi.
               </p>
-            </div>
+            </div> -->
             <div class="card-footer-c">
               <a href="#" class="link-c link-icon">Ver mais
                 <span class="ion-ios-arrow-forward"></span>
@@ -128,13 +128,13 @@
                 <h2 class="title-c">Reconstrução</h2>
               </div>
             </div>
-            <div class="card-body-c">
+            <!-- <div class="card-body-c">
               <p class="content-c">
                 Nulla porttitor accumsan tincidunt. Curabitur aliquet quam id dui posuere blandit. Mauris blandit
                 aliquet elit, eget tincidunt
                 nibh pulvinar a.
               </p>
-            </div>
+            </div> -->
             <div class="card-footer-c">
               <a href="#" class="link-c link-icon">Ver mais
                 <span class="ion-ios-arrow-forward"></span>
@@ -159,13 +159,13 @@
                 <h2 class="title-c">Afiamentos</h2>
               </div>
             </div>
-            <div class="card-body-c">
+            <!-- <div class="card-body-c">
               <p class="content-c">
                 Sed porttitor lectus nibh. Cras ultricies ligula sed magna dictum porta. Praesent sapien massa,
                 convallis a pellentesque
                 nec, egestas non nisi.
               </p>
-            </div>
+            </div> -->
             <div class="card-footer-c">
               <a href="#" class="link-c link-icon">Ver mais
                 <span class="ion-ios-arrow-forward"></span>

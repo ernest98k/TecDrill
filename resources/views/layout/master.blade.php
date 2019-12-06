@@ -167,10 +167,10 @@
           </li>
         </ul>
       </div>
-      <button type="button" class="btn btn-b-n navbar-toggle-box-collapse d-none d-md-block" data-toggle="collapse"
+      <!-- <button type="button" class="btn btn-b-n navbar-toggle-box-collapse d-none d-md-block" data-toggle="collapse"
         data-target="#navbarTogglerDemo01" aria-expanded="false">
         <span class="fa fa-search" aria-hidden="true"></span>
-      </button>
+      </button> -->
     </div>
   </nav>
   <!--/ Nav End /-->
@@ -186,7 +186,7 @@
             </div>
             <div class="w-body-a">
               <p class="w-text-a color-text-a">
-              A Tecdrill é uma empresa que se dedica à produção, reconstrução e comercialização de brocas canhão adaptadas às exigências do mercado atual. 
+              A Tecdrill é uma empresa que se dedica à produção, reconstrução e comercialização de brocas canhão adaptadas às exigências do mercado atual.
 Comercializamos as ferramentas de corte da marca ZPS-FN e de roscagem da marca BOCCASSINI para Portugal.
               </p>
             </div>

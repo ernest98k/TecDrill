@@ -32,15 +32,11 @@
 <section class="news-single nav-arrow-b">
   <div class="container">
     <div class="row">
-      <div class="col-sm-12">
-        <div class="news-img-box">
-          <img src="img/tec2.jpg" alt="" class="img-fluid">
-        </div>
 
-
+<div class="col-sm-6">
       <div class="form-comments">
         <div class="title-box-d"><br><br>
-          <h3 class="title-d"> Opiniões</h3>
+          <h3 class="title-d"> Formulário</h3>
         </div>
         <form class="form-a">
           <div class="row">
@@ -75,6 +71,13 @@
       <br>
 
       </div>
+
+      <div class="col-sm-6">
+        <div class="news-img-box"><br><br><br><br><br><br><br>
+          <img src="img/conversa.jpg" alt="" class="img-fluid">
+        </div>
+        </div>
+
       <div class="col-md-10 offset-md-1 col-lg-10 offset-lg-1">
         <div class="title-box-d"><br><br>
           <h3 class="title-d">Opiniões dos nossos clientes (3)</h3>

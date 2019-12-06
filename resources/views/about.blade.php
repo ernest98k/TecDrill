@@ -94,20 +94,19 @@
               <div class="card-header-d">
                 <div class="card-title-d align-self-center">
                   <h3 class="title-d">
-                    <a href="agent-single.html" class="link-two">Margaret Sotillo
-                      <br> Escala</a>
+                    <a href="agent-single.html" class="link-two">Margarida Santos</a>
                   </h3>
                 </div>
               </div>
               <div class="card-body-d">
                 <p class="content-d color-text-a">
-                  Sed porttitor lectus nibh, Cras ultricies ligula sed magna dictum porta two.
+                  Contabilista
                 </p>
                 <div class="info-agents color-a">
                   <p>
-                    <strong>Phone: </strong> +54 356 945234</p>
+                    <strong>Telefone: </strong> 915321312</p>
                   <p>
-                    <strong>Email: </strong> agents@example.com</p>
+                    <strong>Email: </strong> Margarida.Santos@tecdrill.com</p>
                 </div>
               </div>
               <div class="card-footer-d">
@@ -143,20 +142,19 @@
               <div class="card-header-d">
                 <div class="card-title-d align-self-center">
                   <h3 class="title-d">
-                    <a href="agent-single.html" class="link-two">Stiven Spilver
-                      <br> Darw</a>
+                    <a href="agent-single.html" class="link-two">Bruno Mota</a>
                   </h3>
                 </div>
               </div>
               <div class="card-body-d">
                 <p class="content-d color-text-a">
-                  Sed porttitor lectus nibh, Cras ultricies ligula sed magna dictum porta two.
+                  Gestor Financeiro
                 </p>
                 <div class="info-agents color-a">
                   <p>
-                    <strong>Phone: </strong> +54 356 945234</p>
+                    <strong>Telefone: </strong>912331765</p>
                   <p>
-                    <strong>Email: </strong> agents@example.com</p>
+                    <strong>Email: </strong>Bruno.Mota@tecdrill.com</p>
                 </div>
               </div>
               <div class="card-footer-d">
@@ -192,20 +190,19 @@
               <div class="card-header-d">
                 <div class="card-title-d align-self-center">
                   <h3 class="title-d">
-                    <a href="agent-single.html" class="link-two">Emma Toledo
-                      <br> Cascada</a>
+                    <a href="agent-single.html" class="link-two">Emilia Rodrigues</a>
                   </h3>
                 </div>
               </div>
               <div class="card-body-d">
                 <p class="content-d color-text-a">
-                  Sed porttitor lectus nibh, Cras ultricies ligula sed magna dictum porta two.
+                  Gestora de Produção
                 </p>
                 <div class="info-agents color-a">
                   <p>
-                    <strong>Phone: </strong> +54 356 945234</p>
+                    <strong>Telefone: </strong>962432948</p>
                   <p>
-                    <strong>Email: </strong> agents@example.com</p>
+                    <strong>Email: </strong> Emilia.Rodrigues@tecdrill.com</p>
                 </div>
               </div>
               <div class="card-footer-d">

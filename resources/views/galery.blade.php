@@ -3,7 +3,7 @@
 @section('content')
 
 
-<section class="intro-single">
+<!-- <section class="intro-single">
     <div class="container">
       <div class="row">
         <div class="col-md-12 col-lg-8">
@@ -354,6 +354,6 @@
         </div>
       </div>
     </div>
-  </section>
+  </section> -->
 
 @endsection

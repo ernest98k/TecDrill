@@ -733,14 +733,12 @@
                 </div>
                 <div class="testimonials-content">
                   <p class="testimonial-text">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis, cupiditate ea nam praesentium
-                    debitis hic ber quibusdam
-                    voluptatibus officia expedita corpori.
+                    Com certeza que a Tecdrill têm a melhor qualidade e apoio ao cliente!
                   </p>
                 </div>
                 <div class="testimonial-author-box">
                   <img src="img/mini-testimonial-1.jpg" alt="" class="testimonial-avatar">
-                  <h5 class="testimonial-author">Albert & Erika</h5>
+                  <h5 class="testimonial-author">Alberto & Mariana</h5>
                 </div>
               </div>
             </div>
@@ -760,14 +758,12 @@
                 </div>
                 <div class="testimonials-content">
                   <p class="testimonial-text">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis, cupiditate ea nam praesentium
-                    debitis hic ber quibusdam
-                    voluptatibus officia expedita corpori.
+                    Nada a criticar tudo cinco estrelas!
                   </p>
                 </div>
                 <div class="testimonial-author-box">
                   <img src="img/mini-testimonial-2.jpg" alt="" class="testimonial-avatar">
-                  <h5 class="testimonial-author">Pablo & Emma</h5>
+                  <h5 class="testimonial-author">Paulo & Maria</h5>
                 </div>
               </div>
             </div>

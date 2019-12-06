@@ -7,8 +7,8 @@
       <div class="row">
         <div class="col-md-12 col-lg-8">
           <div class="title-single-box">
-            <h1 class="title-single">Venha-nos conhecer!</h1>
-            <span class="color-text-a">TENS DE CRIAR UM TEXTO PARA AQUI PAULO!</span>
+            <h1 class="title-single">Venha conhecer-nos!</h1>
+            <span class="color-text-a">Contacte-nos para mais informações</span>
           </div>
         </div>
         <div class="col-md-12 col-lg-4">
@@ -35,7 +35,7 @@
         <div class="col-sm-12">
           <div class="contact-map box">
             <div id="map" class="contact-map">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2265.576578652704!2d-8.766708098686546!3d39.754129811419205!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd2273c18edc49db%3A0xaf4e4ae2f3bc47ee!2sR.%20da%20Ribeira%2C%20Leiria!5e1!3m2!1spt-PT!2spt!4v1575412813133!5m2!1spt-PT!2spt" width="100%" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d640.9994701890843!2d-8.77219567081144!3d39.757338898715446!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd2273b8ca5814ff%3A0x2e3852eb1e48a927!2s2420-349%20Santa%20Euf%C3%A9mia!5e1!3m2!1spt-PT!2spt!4v1575398265674!5m2!1spt-PT!2spt" width="100%" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
             </div>
           </div>
         </div>

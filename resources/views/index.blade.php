@@ -724,7 +724,7 @@
             <div class="row">
               <div class="col-sm-12 col-md-6">
                 <div class="testimonial-img">
-                  <img src="img/testimonial-1.jpg" alt="" class="img-fluid">
+                  <img src="img/alberto.jpg" alt="" class="img-fluid">
                 </div>
               </div>
               <div class="col-sm-12 col-md-6">
@@ -737,8 +737,8 @@
                   </p>
                 </div>
                 <div class="testimonial-author-box">
-                  <img src="img/mini-testimonial-1.jpg" alt="" class="testimonial-avatar">
-                  <h5 class="testimonial-author">Alberto & Mariana</h5>
+                  <img src="img/mini-alberto.jpg" alt="" class="testimonial-avatar">
+                  <h5 class="testimonial-author">Alberto</h5>
                 </div>
               </div>
             </div>
@@ -749,7 +749,7 @@
             <div class="row">
               <div class="col-sm-12 col-md-6">
                 <div class="testimonial-img">
-                  <img src="img/testimonial-2.jpg" alt="" class="img-fluid">
+                  <img src="img/maria.jpg" alt="" class="img-fluid">
                 </div>
               </div>
               <div class="col-sm-12 col-md-6">
@@ -762,8 +762,8 @@
                   </p>
                 </div>
                 <div class="testimonial-author-box">
-                  <img src="img/mini-testimonial-2.jpg" alt="" class="testimonial-avatar">
-                  <h5 class="testimonial-author">Paulo & Maria</h5>
+                  <img src="img/mini-maria.jpg" alt="" class="testimonial-avatar">
+                  <h5 class="testimonial-author">Maria</h5>
                 </div>
               </div>
             </div>

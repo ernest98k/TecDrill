@@ -47,12 +47,9 @@
         <div class="col-md-12 section-t8">
           <div class="row">
             <div class="col-md-6 col-lg-5">
-              <img src="img/tec8.jpg" alt="" class="img-fluid">
+              <img src="img/placa_tec.png" alt="" class="img-fluid">
             </div>
             <div class="col-lg-2  d-none d-lg-block">
-              <div class="title-vertical d-flex justify-content-start">
-                <span>Conheça-nos..</span>
-              </div>
             </div>
             <div class="col-md-6 col-lg-5 section-md-t3">
               <div class="title-box-d">
@@ -131,16 +128,6 @@
                         <i class="fa fa-instagram" aria-hidden="true"></i>
                       </a>
                     </li>
-                    <li class="list-inline-item">
-                      <a href="#" class="link-one">
-                        <i class="fa fa-pinterest-p" aria-hidden="true"></i>
-                      </a>
-                    </li>
-                    <li class="list-inline-item">
-                      <a href="#" class="link-one">
-                        <i class="fa fa-dribbble" aria-hidden="true"></i>
-                      </a>
-                    </li>
                   </ul>
                 </div>
               </div>
@@ -190,16 +177,6 @@
                         <i class="fa fa-instagram" aria-hidden="true"></i>
                       </a>
                     </li>
-                    <li class="list-inline-item">
-                      <a href="#" class="link-one">
-                        <i class="fa fa-pinterest-p" aria-hidden="true"></i>
-                      </a>
-                    </li>
-                    <li class="list-inline-item">
-                      <a href="#" class="link-one">
-                        <i class="fa fa-dribbble" aria-hidden="true"></i>
-                      </a>
-                    </li>
                   </ul>
                 </div>
               </div>
@@ -247,16 +224,6 @@
                     <li class="list-inline-item">
                       <a href="#" class="link-one">
                         <i class="fa fa-instagram" aria-hidden="true"></i>
-                      </a>
-                    </li>
-                    <li class="list-inline-item">
-                      <a href="#" class="link-one">
-                        <i class="fa fa-pinterest-p" aria-hidden="true"></i>
-                      </a>
-                    </li>
-                    <li class="list-inline-item">
-                      <a href="#" class="link-one">
-                        <i class="fa fa-dribbble" aria-hidden="true"></i>
                       </a>
                     </li>
                   </ul>

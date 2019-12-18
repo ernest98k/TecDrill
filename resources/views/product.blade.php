@@ -120,24 +120,26 @@
               <div class="row section-t3">
                 <div class="col-sm-12">
                   <div class="title-box-d">
-                    <h3 class="title-d">Amenities</h3>
+                    <h3 class="title-d">Produção Própria</h3>
                   </div>
                 </div>
               </div>
               <div class="amenities-list color-text-a">
-                <ul class="list-a no-margin">
-                  <li>Balcony</li>
-                  <li>Outdoor Kitchen</li>
-                  <li>Cable Tv</li>
-                  <li>Deck</li>
-                  <li>Tennis Courts</li>
-                  <li>Internet</li>
-                  <li>Parking</li>
-                  <li>Sun Room</li>
-                  <li>Concrete Flooring</li>
-                  <object data="myfile.pdf" type="application/pdf" width="100%" height="100%">
-  <p>Alternative text - include a link <a href="{{ asset('/file.pdf') }}">to the PDF!</a></p>
-</object>
+                <ul class="list- no-margin">
+                  <li><a href="{{ asset('/brocas_canhaoCP.pdf') }}">Brocas Canhão - Catálogo e Preçário</a></li>
+                </ul>
+              </div>
+              <div class="row section-t3">
+                <div class="col-sm-12">
+                  <div class="title-box-d">
+                    <h3 class="title-d">Representações</h3>
+                  </div>
+                </div>
+              </div>
+              <div class="amenities-list color-text-a">
+                <ul class="list- no-margin">
+                  <li><a href="{{ asset('/Brocas_fresas_catalogo.pdf') }}">Brocas Fresas - Catálogo</a></li>
+                  <li><a href="{{ asset('/Machos_Catalogo.pdf') }}">Machos - Catálogo e Preçário</a></li>
                 </ul>
               </div>
             </div>

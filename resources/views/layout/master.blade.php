@@ -46,7 +46,7 @@
     </div>
     <span class="close-box-collapse right-boxed ion-ios-close"></span>
     <div class="box-collapse-wrap form">
-      <form class="form-a">
+      <form class="form-a"> <!--FALTA CÓDIGO-->
         <br><br>
         <div class="row">
           <div class="col-md-12 mb-2">
@@ -64,8 +64,49 @@
           <div class="col-md-12">
             <button type="submit" class="btn btn-b">Entrar</button>
           </div>
+          <div class="col-md-12">
+            <a data-toggle="collapse" href="#collapseRegisto" role="button" aria-expanded="false" aria-controls="collapseRegisto">Não tem conta? Registe-se já!</a>
+          </div>
         </div>
       </form>
+      <br><br><br>
+      <div class="collapse" id="collapseRegisto">
+        <div class="title-box-d">
+          <h3 class="title-d">Registar</h3>
+        </div>
+        <form class="form-a"> <!--FALTA CÓDIGO-->
+          <br><br>
+          <div class="row">
+            <div class="col-md-12 mb-2">
+              <div class="form-group">
+                <label for="Type">Nome Completo</label>
+                <input type="text" class="form-control form-control-lg form-control-a" placeholder="Nome">
+              </div>
+            </div>
+            <div class="col-md-12 mb-2">
+              <div class="form-group">
+                <label for="Type">Email</label>
+                <input type="email" class="form-control form-control-lg form-control-a" placeholder="Email">
+              </div>
+            </div>
+            <div class="col-md-12 mb-2">
+              <div class="form-group">
+                <label for="Type">Palavra-passe</label>
+                <input type="password" class="form-control form-control-lg form-control-a" placeholder="******">
+              </div>
+            </div>
+            <div class="col-md-12 mb-2">
+              <div class="form-group">
+                <label for="Type">Confirmar palavra-passe</label>
+                <input type="password" class="form-control form-control-lg form-control-a" placeholder="******">
+              </div>
+            </div>
+            <div class="col-md-12">
+              <button type="submit" class="btn btn-b">Entrar</button>
+            </div>
+          </div>
+        </form>
+      </div>
     </div>
   </div>
   <!--/ Form Search End /-->

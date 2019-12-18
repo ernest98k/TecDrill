@@ -14,7 +14,7 @@
 Route::get('/', function () {
     return view('index');
 })->name('index');
-Route::get('/contacto', function () {
+Route::get('/contact', function () {
     return view('contact');
 })->name('contact');
 Route::get('/sobre', function () {
@@ -38,4 +38,3 @@ Route::get('/serviços', function () {
 Route::get('/recrutamento', function () {
     return view('recruitment');
 })->name('recruitment');
-

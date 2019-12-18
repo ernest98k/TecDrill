@@ -93,6 +93,9 @@
             <a class="nav-link" href="{{route("about")}}">Sobre</a>
           </li>
           <li class="nav-item">
+            <a class="nav-link" href="{{route("product")}}">Catálogo</a>
+          </li>
+          <li class="nav-item">
             <a class="nav-link" href="{{route("galery")}}">Galeria</a>
           </li>
           <li class="nav-item">

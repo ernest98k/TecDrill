@@ -38,3 +38,6 @@ Route::get('/serviços', function () {
 Route::get('/recrutamento', function () {
     return view('recruitment');
 })->name('recruitment');
+Route::get('/catalogo', function () {
+    return view('product');
+})->name('product');

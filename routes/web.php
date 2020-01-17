@@ -41,3 +41,10 @@ Route::get('/recrutamento', function () {
 Route::get('/catalogo', function () {
     return view('product');
 })->name('product');
+
+Route::resource('users', 'UserController');
+Route::resource('faqs', 'FaqController');
+Route::resource('galerys', 'GaleryController');
+Route::resource('opinions', 'OpinionController');
+Route::resource('products', 'ProductController');
+Route::resource('services', 'ServiceController');

@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class AddFieldsToUserTable extends Migration
+class CreateFaqsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,11 @@ class AddFieldsToUserTable extends Migration
      */
     public function up()
     {
-        Schema::table('users', function (Blueprint $table) {
-            $table->enum('role',['N', 'A'])->default('N');
-            $table->softDeletes();
+        Schema::create('faqs', function (Blueprint $table) {
+            $table->bigIncrements('id');
+            $table->string('question');
+            $table->string('answer');
+            $table->timestamps();
         });
     }
 
@@ -26,8 +28,6 @@ class AddFieldsToUserTable extends Migration
      */
     public function down()
     {
-        Schema::table('users', function (Blueprint $table) {
-            //
-        });
+        Schema::dropIfExists('faqs');
     }
 }

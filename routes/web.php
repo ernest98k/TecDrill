@@ -42,6 +42,10 @@ Route::get('/catalogo', function () {
     return view('product');
 })->name('product');
 
+Route::get('/boindex', function () {
+    return view('boindex');
+})->name('boindex');
+
 Route::resource('users', 'UserController');
 Route::resource('faqs', 'FaqController');
 Route::resource('galerys', 'GaleryController');

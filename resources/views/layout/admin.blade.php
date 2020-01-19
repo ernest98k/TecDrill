@@ -7,8 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="icon" type="image/png" sizes="16x16" href="vendor/bo/images/favicon.png">
-    <title>Ample Admin Template - The Ultimate Multipurpose admin template</title>
+    <link rel="icon" type="image/png" sizes="16x16" href="vendor/bo/images/logoicon.png">
+    <title>Tecdrill - Backoffice</title>
     <!-- Bootstrap Core CSS -->
     <link href="{{asset('vendor/bo/bootstrap/dist/css/bootstrap.min.css')}}" rel="stylesheet">
     <!-- Menu CSS -->
@@ -60,16 +60,16 @@
                         <!-- Logo icon image, you can use font-icon also -->
                         <b>
                             <!--This is dark logo icon-->
-                            <img src="{{asset('vendor/bo/images/admin-logo.png')}}" alt="home" class="dark-logo" />
+                            <img src="{{asset('vendor/bo/images/logo.png')}}" alt="home" class="dark-logo" />
                             <!--This is light logo icon-->
-                            <img src="{{asset('vendor/bo/images/admin-logo-dark.png')}}" alt="home" class="light-logo" />
+                            <img src="{{asset('vendor/bo/images/logo.png')}}" alt="home" class="light-logo" />
                         </b>
                         <!-- Logo text image you can use text also -->
                         <span class="hidden-xs">
                             <!--This is dark logo text-->
-                            <img src="{{asset('vendor/bo/images/admin-text.png')}}" alt="home" class="dark-logo" />
+                            <img src="{{asset('vendor/bo/images/logo-text.png')}}" alt="home" class="dark-logo" />
                             <!--This is light logo text-->
-                            <img src="{{asset('vendor/bo/images/admin-text-dark.png')}}" alt="home" class="light-logo" />
+                            <img src="{{asset('vendor/bo/images/logo-text.png')}}" alt="home" class="light-logo" />
                         </span> 
                     </a>
                 </div>
@@ -80,14 +80,14 @@
                     </li>
                     <li>
                         <form role="search" class="app-search hidden-sm hidden-xs m-r-10">
-                            <input type="text" placeholder="Search..." class="form-control"> 
+                            <input type="text" placeholder="Procurar..." class="form-control"> 
                             <a href="">
                                 <i class="fa fa-search"></i>
                             </a> 
                         </form>
                     </li>
                     <li>
-                        <a class="profile-pic" href="#"> <img src="{{asset('vendor/bo/images/users/varun.jpg')}}" alt="user-img" width="36" class="img-circle"><b class="hidden-xs">Steave</b></a>
+                        <a class="profile-pic" href="#"> <img src="{{asset('vendor/bo/images/users/varun.jpg')}}" alt="user-img" width="36" class="img-circle"><b class="hidden-xs">Admin</b></a>
                     </li>
                 </ul>
             </div>
@@ -109,28 +109,34 @@
                         <a href="dashboard.html" class="waves-effect"><i class="fa fa-clock-o fa-fw" aria-hidden="true"></i>Dashboard</a>
                     </li>
                     <li>
-                        <a href="profile.html" class="waves-effect"><i class="fa fa-user fa-fw" aria-hidden="true"></i>Profile</a>
+                        <a href="profile.html" class="waves-effect"><i class="fa fa-user fa-fw" aria-hidden="true"></i>Sobre</a>
                     </li>
                     <li>
-                        <a href="basic-table.html" class="waves-effect"><i class="fa fa-table fa-fw" aria-hidden="true"></i>Basic Table</a>
+                        <a href="basic-table.html" class="waves-effect"><i class="fa fa-table fa-fw" aria-hidden="true"></i>Catálogo</a>
                     </li>
                     <li>
-                        <a href="fontawesome.html" class="waves-effect"><i class="fa fa-font fa-fw" aria-hidden="true"></i>Icons</a>
+                        <a href="fontawesome.html" class="waves-effect"><i class="fa fa-font fa-fw" aria-hidden="true"></i>Galeria</a>
                     </li>
                     <li>
-                        <a href="map-google.html" class="waves-effect"><i class="fa fa-globe fa-fw" aria-hidden="true"></i>Google Map</a>
+                        <a href="map-google.html" class="waves-effect"><i class="fa fa-globe fa-fw" aria-hidden="true"></i>Serviços</a>
                     </li>
                     <li>
-                        <a href="blank.html" class="waves-effect"><i class="fa fa-columns fa-fw" aria-hidden="true"></i>Blank Page</a>
+                        <a href="blank.html" class="waves-effect"><i class="fa fa-columns fa-fw" aria-hidden="true"></i>Recrutamento</a>
                     </li>
                     <li>
-                        <a href="404.html" class="waves-effect"><i class="fa fa-info-circle fa-fw" aria-hidden="true"></i>Error 404</a>
+                        <a href="404.html" class="waves-effect"><i class="fa fa-id-badge fa-fw" aria-hidden="true"></i>Contactos</a>
+                    </li>
+                    <li>
+                        <a href="404.html" class="waves-effect"><i class="fa fa-comments fa-fw" aria-hidden="true"></i>Opiniões</a>
+                    </li>
+                    <li>
+                        <a href="404.html" class="waves-effect"><i class="fa fa-info-circle fa-fw" aria-hidden="true"></i>FAQ's</a>
+                    </li>
+                    <li>
+                        <a href="404.html" class="waves-effect"><i class="fa fa-user fa-fw" aria-hidden="true"></i>Utilizadores</a>
                     </li>
 
                 </ul>
-                <div class="center p-20">
-                     <a href="https://wrappixel.com/templates/ampleadmin/" target="_blank" class="btn btn-danger btn-block waves-effect waves-light">Upgrade to Pro</a>
-                 </div>
             </div>
             
         </div>

@@ -60,7 +60,7 @@ class UserController extends Controller
         $fields = $request->validated();
         $user = new User;
         $user->fill($fields);
-        $user->password = Hash::make('admin');
+        $user->password = Hash::make('password');
         $user->save();
 
         //$user->sendEmailVerificationNotification();

@@ -46,9 +46,18 @@ Route::get('/boindex', function () {
     return view('boindex');
 })->name('boindex');
 
-Route::resource('users', 'UserController');
-Route::resource('faqs', 'FaqController');
-Route::resource('galerys', 'GaleryController');
-Route::resource('opinions', 'OpinionController');
-Route::resource('products', 'ProductController');
-Route::resource('services', 'ServiceController');
+
+Route::group(['middleware' => ['auth', 'verified']], function () {
+    Route::post('/users/{user}/send_reactivate_mail',
+        "UserController@send_reactivate_email")->name('users.sendActivationEmail');
+    Route::resource('users', 'UserController');
+    Route::resource('faqs', 'FaqController');
+    Route::resource('galerys', 'GaleryController');
+    Route::resource('opinions', 'OpinionController');
+    Route::resource('products', 'ProductController');
+    Route::resource('services', 'ServiceController');
+});
+
+Route::get('/admin', 'HomeController@index')->name('admin');
+
+Auth::routes(['register' => false, 'verify' => true]);

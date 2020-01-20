@@ -63,6 +63,7 @@
                             <option>Novembro 2019</option>
                             <option>Outubro 2019</option>
                             <option>Setembro 2019</option>
+                            <option>Agosto 2019</option>
                         </select>
                     </div>
                     <h3 class="box-title">REGISTOS</h3>
@@ -149,7 +150,7 @@
                                     <div class="comment-center p-t-10">
                                         <div class="comment-body">
                                         <div class="mail-contnet">
-                                            <h5>Gonçalo Rito</h5><span class="time">10:20    29  Dezembro 2019</span>
+                                            <h5>Rodrigo Matias</h5><span class="time">10:20    29  Dezembro 2019</span>
                                             <br/><span class="mail-desc">Donec ac condimentum massa. Etiam pellentesque pretium lacus. Phasellus ultricies dictum suscipit. Aenean commodo dui pellentesque molestie feugiat. Aenean commodo dui pellentesque molestie feugiat</span> <a href="javacript:void(0)" class="btn btn btn-rounded btn-default btn-outline m-r-5"><i class="ti-check text-success m-r-5"></i>Ver Mais</a>
                                         </div>
                                     </div>
@@ -158,7 +159,7 @@
                                     <div class="comment-center p-t-10">
                                         <div class="comment-body">
                                         <div class="mail-contnet">
-                                            <h5>Gonçalo Rito</h5><span class="time">10:20    29  Dezembro 2019</span>
+                                            <h5>Duarte Leocadio</h5><span class="time">10:20    29  Dezembro 2019</span>
                                             <br/><span class="mail-desc">Donec ac condimentum massa. Etiam pellentesque pretium lacus. Phasellus ultricies dictum suscipit. Aenean commodo dui pellentesque molestie feugiat. Aenean commodo dui pellentesque molestie feugiat</span> <a href="javacript:void(0)" class="btn btn btn-rounded btn-default btn-outline m-r-5"><i class="ti-check text-success m-r-5"></i>Ver Mais</a>
                                         </div>
                                     </div>

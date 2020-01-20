@@ -27,9 +27,11 @@
     <!-- color CSS -->
     <link href="{{asset('vendor/bo/css/colors/default.css')}}" id="theme" rel="stylesheet">
 
-    <link href="{{asset('vendor/bo/css/fontawesome.css')}}" rel="stylesheet">
+   <!-- <link href="{{asset('vendor/bo/css/fontawesome.css')}}" rel="stylesheet">
     <link href="{{asset('vendor/bo/css/fontawesome.min.css')}}" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   -->
+    <link href="{{asset('vendor/fontawesome-free/css/all.min.css')}}" rel=" stylesheet" type="text/css">
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>

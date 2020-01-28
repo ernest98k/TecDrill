@@ -110,7 +110,7 @@ class UserController extends Controller
      * @param  \App\User  $user
      * @return \Illuminate\Http\Response
      */
-    public function destroy(User $user)
+    public function destroy(User $user)//caso haja problemas por id
     {
         $user->delete();
         return redirect()->route('users.index')->with('success', 'Utilizador eliminado com sucesso');

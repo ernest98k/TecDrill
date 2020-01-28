@@ -27,7 +27,11 @@
     <!-- color CSS -->
     <link href="{{asset('vendor/bo/css/colors/default.css')}}" id="theme" rel="stylesheet">
 
+   <!-- <link href="{{asset('vendor/bo/css/fontawesome.css')}}" rel="stylesheet">
+    <link href="{{asset('vendor/bo/css/fontawesome.min.css')}}" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   -->
+    <link href="{{asset('vendor/fontawesome-free/css/all.min.css')}}" rel=" stylesheet" type="text/css">
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -56,7 +60,7 @@
             <div class="navbar-header">
                 <div class="top-left-part">
                     <!-- Logo -->
-                    <a class="logo" href="dashboard.html">
+                    <a class="logo" href="{{route('admin')}}">
                         <!-- Logo icon image, you can use font-icon also -->
                         <b>
                             <!--This is dark logo icon-->
@@ -78,16 +82,21 @@
                     <li>
                         <a class="nav-toggler open-close waves-effect waves-light hidden-md hidden-lg" href="javascript:void(0)"><i class="fa fa-bars"></i></a>
                     </li>
-                    <li>
-                        <form role="search" class="app-search hidden-sm hidden-xs m-r-10">
-                            <input type="text" placeholder="Procurar..." class="form-control"> 
-                            <a href="">
-                                <i class="fa fa-search"></i>
-                            </a> 
-                        </form>
-                    </li>
-                    <li>
-                        <a class="profile-pic" href="#"> <img src="{{asset('vendor/bo/images/users/varun.jpg')}}" alt="user-img" width="36" class="img-circle"><b class="hidden-xs">Admin</b></a>
+                    <li class="nav-item dropdown no-arrow">
+                        @if(auth()->check())    
+                        <a class="profile-pic" href="#"> <img src="{{asset('vendor/bo/images/users/varun.jpg')}}" alt="user-img" width="36" class="img-circle"><b class="hidden-xs">{{auth()->user()->name}}</b></a>
+                         <!-- Dropdown - User Information -->
+                         <li>
+                         <form action="{{route('logout')}}" method="post" class="inline">
+                            @csrf
+                            <button class="btn btn-primary" type="submit">Logout</button>
+                          </form>
+                        </li>
+                        @else
+                            <a href="{{route('login')}}">
+                                <span class="mr-2 d-none d-lg-inline text-gray-200 small">Login</span>
+                            </a>
+                        @endif
                     </li>
                 </ul>
             </div>
@@ -112,16 +121,16 @@
                         <a href="profile.html" class="waves-effect"><i class="fa fa-user fa-fw" aria-hidden="true"></i>Sobre</a>
                     </li>
                     <li>
-                        <a href="basic-table.html" class="waves-effect"><i class="fa fa-table fa-fw" aria-hidden="true"></i>Catálogo</a>
+                        <a href="basic-table.html" class="waves-effect"><i class="fa fa-id-badge fa-fw" aria-hidden="true"></i>Catálogo</a>
                     </li>
                     <li>
-                        <a href="fontawesome.html" class="waves-effect"><i class="fa fa-font fa-fw" aria-hidden="true"></i>Galeria</a>
+                        <a href="fontawesome.html" class="waves-effect"><i class="fa fa-id-badge fa-fw" aria-hidden="true"></i>Galeria</a>
                     </li>
                     <li>
-                        <a href="map-google.html" class="waves-effect"><i class="fa fa-globe fa-fw" aria-hidden="true"></i>Serviços</a>
+                        <a href="map-google.html" class="waves-effect"><i class="fa fa-id-badge fa-fw" aria-hidden="true"></i>Serviços</a>
                     </li>
                     <li>
-                        <a href="blank.html" class="waves-effect"><i class="fa fa-columns fa-fw" aria-hidden="true"></i>Recrutamento</a>
+                        <a href="blank.html" class="waves-effect"><i class="fa fa-user fa-fw" aria-hidden="true"></i>Recrutamento</a>
                     </li>
                     <li>
                         <a href="404.html" class="waves-effect"><i class="fa fa-id-badge fa-fw" aria-hidden="true"></i>Contactos</a>
@@ -130,10 +139,10 @@
                         <a href="404.html" class="waves-effect"><i class="fa fa-comments fa-fw" aria-hidden="true"></i>Opiniões</a>
                     </li>
                     <li>
-                        <a href="404.html" class="waves-effect"><i class="fa fa-info-circle fa-fw" aria-hidden="true"></i>FAQ's</a>
+                        <a href="404.html" class="waves-effect"><i class="fa fa-id-badge fa-fw" aria-hidden="true"></i>FAQ's</a>
                     </li>
                     <li>
-                        <a href="404.html" class="waves-effect"><i class="fa fa-user fa-fw" aria-hidden="true"></i>Utilizadores</a>
+                        <a href="{{route('users.index')}}" class="waves-effect"><i class="fa fa-user fa-fw" aria-hidden="true"></i>Utilizadores</a>
                     </li>
 
                 </ul>
@@ -143,14 +152,31 @@
         <!-- ============================================================== -->
         <!-- End Left Sidebar -->
         <!-- ============================================================== -->
+
+    
+  
         <!-- ============================================================== -->
         <!-- Page Content -->
         <!-- ============================================================== -->
+   
 <div id="page-wrapper">
-        @yield("content")
+    @if ($errors->any())
+        @include ('partials.errors')
+    @endif
+
+    @if (!empty(session('success')))
+        @include ('partials.success')
+    @endif
+
+    @yield("content")
 
          <!-- /.container-fluid -->
-    <footer class="footer text-center"> 2017 &copy; Ample Admin brought to you by wrappixel.com </footer>
+    <footer class="footer text-center">
+    <p class="copyright color-text-a">
+            <br>
+              &copy; Copyright
+              <span class="color-a">TecDrill</span> All Rights Reserved.
+            </p></footer>
 </div>
         <!-- ============================================================== -->
         <!-- End Page Content -->
@@ -159,6 +185,29 @@
     <!-- ============================================================== -->
     <!-- End Wrapper -->
     <!-- ============================================================== -->
+
+      <!-- Logout Modal-->
+  <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+        <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">×</span>
+        </button>
+      </div>
+      <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+      <div class="modal-footer">
+        <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+        <form action="{{route('logout')}}" method="post" class="inline">
+          @csrf
+          <button class="btn btn-primary" type="submit">Logout</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
     <!-- ============================================================== -->
     <!-- All Jquery -->
     <!-- ============================================================== -->

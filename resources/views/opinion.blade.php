@@ -38,9 +38,9 @@
         <div class="title-box-d"><br><br>
           <h3 class="title-d"> Formulário</h3>
         </div>
-
+        
         @yield('formulario')
-
+        
       </div>
 
       <br>

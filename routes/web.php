@@ -50,9 +50,6 @@ Route::get('/boindex', function () {
 
 
 
-Route::get('/opinion/add.blade', function () {
-    return view('opinion');
-});
 
 Route::group(['middleware' => ['auth', 'verified']], function () {
     Route::post('/users/{user}/send_reactivate_mail',

@@ -4,6 +4,10 @@ namespace App\Http\Controllers;
 
 use App\Opinion;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
+use App\Http\Requests\StoreOpinionRequest;
+use Illuminate\Support\Facades\Storage;
+
 
 class OpinionController extends Controller
 {
@@ -24,7 +28,8 @@ class OpinionController extends Controller
      */
     public function create()
     {
-        //
+      $opinion = new Opinion;
+      return view('opinion.add',compact("opinion"));
     }
 
     /**
@@ -33,9 +38,16 @@ class OpinionController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(StoreOpinionRequest $request)
     {
-        //
+      $fields=$request->validated();
+
+      $opinion = new Opinion;
+      $opinion->fill($fields);
+      $opinion->save();
+      }
+      return redirect()->route('opinion.index')->with('success', 'Opinião inserida com sucesso');
+
     }
 
     /**

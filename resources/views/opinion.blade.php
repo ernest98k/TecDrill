@@ -38,34 +38,9 @@
         <div class="title-box-d"><br><br>
           <h3 class="title-d"> Formulário</h3>
         </div>
-        <form class="form-a">
-          <div class="row">
-            <div class="col-md-6 mb-3">
-              <div class="form-group">
-                <label for="inputName">Nome Completo</label>
-                <input type="text" class="form-control form-control-lg form-control-a" id="inputName" placeholder="Nome Completo *"
-                  required>
-              </div>
-            </div>
-            <div class="col-md-6 mb-3">
-              <div class="form-group">
-                <label for="inputEmail1">Email</label>
-                <input type="email" class="form-control form-control-lg form-control-a" id="inputEmail1"
-                  placeholder="Email *" required>
-              </div>
-            </div>
-            <div class="col-md-12 mb-3">
-              <div class="form-group">
-                <label for="textMessage">Opinião</label>
-                <textarea id="textMessage" class="form-control" placeholder="Deixe aqui a sua opinião *" name="message" cols="45"
-                  rows="8" required></textarea>
-              </div>
-            </div>
-            <div class="col-md-12">
-              <center><button type="submit" class="btn btn-a">Enviar </button></center>
-            </div>
-          </div>
-        </form>
+
+        @yield('formulario')
+
       </div>
 
       <br>

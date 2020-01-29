@@ -29,6 +29,9 @@ Route::get('/comentarios', function () {
 Route::get('/opinioes', function () {
     return view('opinion');
 })->name('opinion');
+Route::post('/opinioes', function () {
+    return view('opinion');
+})->name('opinion.store');
 Route::get('/faq', function () {
     return view('faq');
 })->name('faq');
@@ -41,11 +44,15 @@ Route::get('/recrutamento', function () {
 Route::get('/catalogo', function () {
     return view('product');
 })->name('product');
-
 Route::get('/boindex', function () {
     return view('boindex');
 })->name('boindex');
 
+
+
+Route::get('/opinion/add.blade', function () {
+    return view('opinion');
+});
 
 Route::group(['middleware' => ['auth', 'verified']], function () {
     Route::post('/users/{user}/send_reactivate_mail',
@@ -53,10 +60,11 @@ Route::group(['middleware' => ['auth', 'verified']], function () {
     Route::resource('users', 'UserController');
     Route::resource('faqs', 'FaqController');
     Route::resource('galerys', 'GaleryController');
-    Route::resource('opinions', 'OpinionController');
+    Route::resource('opinion', 'OpinionController');
     Route::resource('products', 'ProductController');
     Route::resource('services', 'ServiceController');
 });
+
 
 Route::get('/admin', 'HomeController@index')->name('admin');
 

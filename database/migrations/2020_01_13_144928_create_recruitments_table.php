@@ -15,6 +15,11 @@ class CreateRecruitmentsTable extends Migration
     {
         Schema::create('recruitments', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->string('name');
+            $table->string('phone');
+            $table->string('email');
+            $table->string('cv');
+            $table->string('observation');
             $table->timestamps();
         });
     }

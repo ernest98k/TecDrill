@@ -4,6 +4,9 @@ namespace App\Http\Controllers;
 
 use App\Faq;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
+use App\Http\Requests\StoreFaqRequest;
+use Illuminate\Support\Facades\Storage;
 
 class FaqController extends Controller
 {
@@ -14,7 +17,8 @@ class FaqController extends Controller
      */
     public function index()
     {
-        //
+      $faqs = Faq::all();
+      return view('faq', compact('faqs'));
     }
 
     /**
@@ -24,7 +28,8 @@ class FaqController extends Controller
      */
     public function create()
     {
-        //
+      $faq = new Faq;
+      return view('faq',compact("faq"));
     }
 
     /**
@@ -35,7 +40,11 @@ class FaqController extends Controller
      */
     public function store(Request $request)
     {
-        //
+      $faq = new Faq;
+      $faq->fill($request->all());
+      $faq->save();
+
+      return redirect()->route('faq')->with('success', 'Faq inserida com sucesso');
     }
 
     /**
@@ -46,7 +55,7 @@ class FaqController extends Controller
      */
     public function show(Faq $faq)
     {
-        //
+        return view('faq',compact('faq'));
     }
 
     /**
@@ -81,5 +90,11 @@ class FaqController extends Controller
     public function destroy(Faq $faq)
     {
         //
+    }
+
+    public function faqs()
+    {
+     $faqs = Faq::orderBy("created_at")->paginate('3');
+     return view('faq',compact('faqs'));
     }
 }

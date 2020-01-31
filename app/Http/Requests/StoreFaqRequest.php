@@ -4,7 +4,7 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class StoreOpinionRequest extends FormRequest
+class StoreFaqRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -24,15 +24,14 @@ class StoreOpinionRequest extends FormRequest
     public function rules()
     {
         return [
-          "name" => 'required|min:3|max:100|regex:/^[A-ZÀ-úa-z\s]+$/',
-          'email' => 'required|email',
-          "opinion" => 'required|min:3|max:100|regex:/^[A-ZÀ-úa-z\s]+$/',
+          "question" => 'required|min:3|max:100|regex:/^[A-ZÀ-úa-z\s]+$/',
+          'answer' => 'required|min:3|max:100|regex:/^[A-ZÀ-úa-z\s]+$/',
         ];
     }
     public function messages()
     {
     return [
-    'name.regex' => 'Nome deve conter letras e espaços'
+    'question.regex' => 'Nome deve conter letras e espaços'
     ];
     }
 }

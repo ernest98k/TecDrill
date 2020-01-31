@@ -53,30 +53,25 @@
 
 
       <div class="col-sm-12">
-      <center><h3 class="title-d">Em que podemos ajudá-lo?</h3></center><br><span class="color-text-a"></span>
-      <form class="" action="index.html" method="post">
-        <center><input type="text" name="search" value="" placeholder="Pesquisar"></center>
-      </form>
-    </div>
-
-      <div class="col-md-10 offset-md-1 col-lg-10 offset-lg-1">
-        <div class="title-box-d"><br><br>
-          <h3 class="title-d">1. Qual é o horário da empresa ?</h3>
-          <span class="color-text-a">Lorem ipsum dolor sit amet, consectetur adipisicing elit.  </span>
-        </div>
-
-        <div class="title-box-d"><br><br>
-          <h3 class="title-d">2. Quanto tempo demora uma encomenda a chegar ?</h3>
-          <span class="color-text-a">Lorem ipsum dolor sit amet, consectetur adipisicing elit.  </span>
-        </div>
-
-        <div class="title-box-d"><br><br>
-          <h3 class="title-d">3. O cliente pode pagar a prestações ?</h3>
-          <span class="color-text-a">Lorem ipsum dolor sit amet, consectetur adipisicing elit.  </span>
-        </div>
-
-
+        <center><h3 class="title-d">Em que podemos ajudá-lo?</h3></center><br><span class="color-text-a"></span>
+        <form class="" action="index.html" method="post">
+          <center><input type="text" name="search" value="" placeholder="Pesquisar"></center>
+        </form>
       </div>
+
+      @if(count($faqs))
+        @foreach ($faqs as $faq)
+          <div class="col-md-10 offset-md-1 col-lg-10 offset-lg-1">
+            <div class="title-box-d"><br><br>
+              <h3 class="title-d">{{$faq->question}}</h3>
+              <span class="color-text-a">{{$faq->answer}}</span>
+            </div>
+          </div>
+          @endforeach
+        @else
+        <h6>Não Existe FAQ's Registadas</h6>
+        @endif
+
     </div>
   </div>
 </section>

@@ -18,7 +18,8 @@ class OpinionController extends Controller
      */
     public function index()
     {
-        //
+      $opinions=Opinion::all();
+      return view('opinion', compact('opinions'));
     }
 
     /**
@@ -29,7 +30,7 @@ class OpinionController extends Controller
     public function create()
     {
       $opinion = new Opinion;
-      return view('opinion.add',compact("opinion"));
+      return view('opinion',compact("opinion"));
     }
 
     /**
@@ -38,15 +39,13 @@ class OpinionController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(StoreOpinionRequest $request)
+    public function store(Request $request)
     {
-      $fields=$request->validated();
-
       $opinion = new Opinion;
-      $opinion->fill($fields);
+      $opinion->fill($request->all());
       $opinion->save();
-      }
-      return redirect()->route('opinion.index')->with('success', 'Opinião inserida com sucesso');
+
+      return redirect()->route('opinion')->with('success', 'Opinião inserida com sucesso');
 
     }
 
@@ -58,7 +57,7 @@ class OpinionController extends Controller
      */
     public function show(Opinion $opinion)
     {
-        //
+        return view('opinion',compact('opinion'));
     }
 
     /**
@@ -94,4 +93,11 @@ class OpinionController extends Controller
     {
         //
     }
+
+    public function opinions()
+    {
+     $opinions = Opinion::orderBy("created_at")->paginate('3');
+     return view('opinion',compact('opinions'));
+   }
+
 }

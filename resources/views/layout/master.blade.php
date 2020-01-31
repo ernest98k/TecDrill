@@ -206,10 +206,10 @@
             <div class="w-body-a">
               <ul class="list-unstyled">
                 <li class="item-list-a">
-                  <i class="fa fa-angle-right"></i> <a  href="{{route("opinion")}}">Opiniões</a>
+                  <i class="fa fa-angle-right"></i> <a  href="{{route("gm.opinions")}}">Opiniões</a>
                 </li>
                 <li class="item-list-a">
-                  <i class="fa fa-angle-right"></i> <a href="{{route("faq")}}">FAQ's</a>
+                  <i class="fa fa-angle-right"></i> <a href="{{route("gm.faqs")}}">FAQ's</a>
                 </li>
               </ul>
             </div>

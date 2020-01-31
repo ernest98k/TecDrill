@@ -26,12 +26,13 @@ Route::get('/galeria', function () {
 Route::get('/comentarios', function () {
     return view('comments');
 })->name('comments');
+
 Route::get('/opinioes', function () {
     return view('opinion');
 })->name('opinion');
-Route::post('/opinioes', function () {
-    return view('opinion');
-})->name('opinion.store');
+
+Route::post('/opinioes', 'OpinionController@store')->name('opinion.store');
+
 Route::get('/faq', function () {
     return view('faq');
 })->name('faq');
@@ -49,19 +50,21 @@ Route::get('/boindex', function () {
 })->name('boindex');
 
 
+Route::get('/opinioes','OpinionController@opinions')->name('gm.opinions');
+Route::get('/faq','FaqController@faqs')->name('gm.faqs');
 
 
 Route::group(['middleware' => ['auth', 'verified']], function () {
     Route::post('/users/{user}/send_reactivate_mail',
         "UserController@send_reactivate_email")->name('users.sendActivationEmail');
     Route::resource('users', 'UserController');
-    Route::resource('faqs', 'FaqController');
     Route::resource('galerys', 'GaleryController');
-    Route::resource('opinion', 'OpinionController');
     Route::resource('products', 'ProductController');
     Route::resource('services', 'ServiceController');
 });
 
+Route::resource('opinion', 'OpinionController');
+Route::resource('faqs', 'FaqController');
 
 Route::get('/admin', 'HomeController@index')->name('admin');
 

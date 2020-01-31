@@ -45,7 +45,7 @@ class OpinionController extends Controller
       $opinion->fill($request->all());
       $opinion->save();
 
-      return redirect()->route('opinion')->with('success', 'Opinião inserida com sucesso');
+      return redirect()->route('gm.opinions')->with('success', 'Opinião inserida com sucesso');
 
     }
 
@@ -96,7 +96,7 @@ class OpinionController extends Controller
 
     public function opinions()
     {
-     $opinions = Opinion::orderBy("created_at")->paginate('3');
+     $opinions = Opinion::orderBy("created_at")->paginate('4');
      return view('opinion',compact('opinions'));
    }
 

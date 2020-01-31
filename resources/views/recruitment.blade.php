@@ -38,36 +38,37 @@
                 <div class="title-box-d"><br><br><br>
                     <h3 class="title-d"> Formulário</h3>
                 </div>
-                <form class="form-a" action="">
+            <form class="form-a" action="{{ action('RecruitmentController@store')}}" method="post" enctype="multipart/form-data">
+                   @csrf
                     <div class="row">
                         <div class="col-md-6 mb-3">
                             <div class="form-group">
                                 <label for="inputName">Nome</label>
-                                <input type="text" class="form-control form-control-lg form-control-a" id="inputName" placeholder="Name *" required>
+                                <input type="text" class="form-control form-control-lg form-control-a" name="name" id="inputName" placeholder="Nome *" required>
                             </div>
                         </div>
                         <div class="col-md-6 mb-3">
                             <div class="form-group">
                                 <label for="inputTele">Telemóvel</label>
-                                <input type="number" class="form-control form-control-lg form-control-a" id="inputTelemovel" placeholder="Telemóvel *" required>
+                                <input type="tel" class="form-control form-control-lg form-control-a" name="phone" id="inputPhone" pattern="[0-9]{3}[0-9]{3}[0-9]{3}" placeholder="Telemóvel *" required>
                             </div>
                         </div>
                         <div class="col-md-6 mb-3">
                             <div class="form-group">
                                 <label for="inputEmail">Email</label>
-                                <input type="email" class="form-control form-control-lg form-control-a" id="inputEmail" placeholder="Email *" required>
+                                <input type="email" class="form-control form-control-lg form-control-a" name="email" id="inputEmail" placeholder="Email *" required>
                             </div>
                         </div>
                         <div class="col-md-6 mb-3">
                             <div class="form-group">
-                                <label for="inputEmail">Curriculum vitae</label>
-                                <input type="file" accept=".xls,.xlsx,.png,.jpg,.pdf" class="form-control form-control-lg form-control-a" id="inputCurriculum"  required>
+                                <label for="inputCv">Curriculum vitae</label>
+                                <input type="file" accept=".png,.jpg,.pdf" class="form-control form-control-lg form-control-a" name="cv" id="inputCv"  required>
                             </div>
                         </div>
                         <div class="col-md-12 mb-3">
                             <div class="form-group">
                                 <label for="textMessage">Observações</label>
-                                <textarea id="textMessage" class="form-control" placeholder="Comenta alguma coisa.." name="message" cols="45" rows="5" required></textarea>
+                                <textarea id="observation" class="form-control" placeholder="Comenta alguma coisa.." name="observation" cols="45" rows="5"></textarea>
                             </div>
                         </div>
                         <div class="col-md-12">

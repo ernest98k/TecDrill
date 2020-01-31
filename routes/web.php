@@ -52,7 +52,7 @@ Route::get('/boindex', function () {
 
 Route::get('/opinioes','OpinionController@opinions')->name('gm.opinions');
 Route::get('/faq','FaqController@faqs')->name('gm.faqs');
-
+Route::post('/recrutamento','RecruitmentController@store');
 
 Route::group(['middleware' => ['auth', 'verified']], function () {
     Route::post('/users/{user}/send_reactivate_mail',

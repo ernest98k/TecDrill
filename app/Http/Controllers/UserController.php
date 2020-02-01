@@ -12,6 +12,10 @@ use App\Http\Requests\UpdateUserRequest;
 
 class UserController extends Controller
 {
+    public function __construct()
+    {
+        $this->authorizeResource(User::class, 'user');
+    }
     /**
      * Display a listing of the resource.
      *
@@ -63,7 +67,7 @@ class UserController extends Controller
         $user->password = Hash::make('password');
         $user->save();
 
-        //$user->sendEmailVerificationNotification();
+        $user->sendEmailVerificationNotification();
         return redirect()->route('users.index')->with('success', 'Utilizador criado com sucesso');
     }
 
@@ -98,7 +102,15 @@ class UserController extends Controller
      */
     public function update(UpdateUserRequest $request, User $user)
     {
-        $fields = $request->validated();
+        if ($user->can('updateRole',$user))
+        {
+            $fields = $request->validated();
+        }
+        else
+        {
+            $fields = $request->except("role");
+        }
+        //$fields = $request->validated();
         $user->fill($fields);
         $user->save();
         return redirect()->route('users.index')->with('success', 'Utilizador atualizado com sucesso');

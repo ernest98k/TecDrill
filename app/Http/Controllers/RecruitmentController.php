@@ -46,7 +46,7 @@ class RecruitmentController extends Controller
         $extension=$request->file('cv')->getClientOriginalExtension();
         //filename para o store, fazemos a funcao time  para nao haver ficheiros repetidos
         $fileNameToStore=$filename.'_'.time().'.'.$extension;
-        //upload da imagem
+        //upload da imagem                   e cria a pasta "cv" no public
         $path=$request->file('cv')->storeAs('public/cv', $fileNameToStore);
 
         $recruitment=new Recruitment();

@@ -1,4 +1,4 @@
-
+@can("updateRole",$user)
 <div class="form-group">
     <label for="inputFullname">Nome</label>
     <input type="text" class="form-control" name="name" id="inputFullname" value="{{old('name',$user->name)}}" />
@@ -17,3 +17,4 @@
         <option  {{old('role',$user->role)=='N'?"selected":""}} value="N">Normal</option>
     </select>
 </div>
+@endcan

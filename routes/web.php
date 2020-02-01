@@ -45,9 +45,7 @@ Route::get('/recrutamento', function () {
 Route::get('/catalogo', function () {
     return view('product');
 })->name('product');
-Route::get('/boindex', function () {
-    return view('boindex');
-})->name('boindex');
+
 
 
 Route::get('/opinioes','OpinionController@opinions')->name('gm.opinions');

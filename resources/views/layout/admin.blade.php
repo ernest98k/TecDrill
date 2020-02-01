@@ -84,7 +84,7 @@
                     </li>
                     <li class="nav-item dropdown no-arrow">
                         @if(auth()->check())    
-                        <a class="profile-pic" href="#"> <img src="{{asset('vendor/bo/images/users/varun.jpg')}}" alt="user-img" width="36" class="img-circle"><b class="hidden-xs">{{auth()->user()->name}}</b></a>
+                        <a class="profile-pic" href="#"> <img src="{{asset('vendor/bo/images/users/porfile.png')}}" alt="user-img" width="36" class="img-circle"><b class="hidden-xs">{{auth()->user()->name}}</b></a>
                          <!-- Dropdown - User Information -->
                          <li>
                          <form action="{{route('logout')}}" method="post" class="inline">
@@ -115,7 +115,7 @@
                 </div>
                 <ul class="nav" id="side-menu">
                     <li style="padding: 70px 0 0;">
-                        <a href="dashboard.html" class="waves-effect"><i class="fa fa-clock-o fa-fw" aria-hidden="true"></i>Dashboard</a>
+                        <a href="{{route('admin')}}" class="waves-effect"><i class="fa fa-clock-o fa-fw" aria-hidden="true"></i>Dashboard</a>
                     </li>
                     <li>
                         <a href="profile.html" class="waves-effect"><i class="fa fa-user fa-fw" aria-hidden="true"></i>Sobre</a>

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Requests\StoreRecruitmentRequest;
 use App\Recruitment;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class RecruitmentController extends Controller
 {
@@ -98,6 +99,9 @@ class RecruitmentController extends Controller
      */
     public function destroy(Recruitment $recruitment)
     {
-        
+        Storage::delete('public/cv/'.$recruitment->cv); //public para eliminar
+        $recruitment->delete();
+        return redirect('recruitments')->with('success','Recrutamento removido');
+
     }
 }

@@ -15,8 +15,8 @@ class RecruitmentController extends Controller
      */
     public function index()
     {
-        $recruitments=Recruitment::all();
-        return view('recruitments', compact('recruitments'));
+        $recruitments=Recruitment::orderBy('id', 'DESC')->get();
+        return view('recruitments.list', compact('recruitments'));
     }
 
     /**
@@ -98,6 +98,6 @@ class RecruitmentController extends Controller
      */
     public function destroy(Recruitment $recruitment)
     {
-        //
+        
     }
 }

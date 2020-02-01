@@ -61,6 +61,7 @@ Route::group(['middleware' => ['auth', 'verified']], function () {
     Route::resource('galerys', 'GaleryController');
     Route::resource('products', 'ProductController');
     Route::resource('services', 'ServiceController');
+    Route::resource('recruitments', 'RecruitmentController');
 });
 
 Route::resource('opinion', 'OpinionController');

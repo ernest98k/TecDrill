@@ -130,7 +130,7 @@
                         <a href="map-google.html" class="waves-effect"><i class="fa fa-id-badge fa-fw" aria-hidden="true"></i>Serviços</a>
                     </li>
                     <li>
-                        <a href="blank.html" class="waves-effect"><i class="fa fa-user fa-fw" aria-hidden="true"></i>Recrutamento</a>
+                        <a href="{{route('recruitments.index')}}" class="waves-effect"><i class="fa fa-user fa-fw" aria-hidden="true"></i>Recrutamento</a>
                     </li>
                     <li>
                         <a href="404.html" class="waves-effect"><i class="fa fa-id-badge fa-fw" aria-hidden="true"></i>Contactos</a>

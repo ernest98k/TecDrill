@@ -8,8 +8,12 @@
 
 	<div class="card shadow mb-4">
 		<div class="card-header py-3">
+			@can("create",App\User::class)
 			<a class="btn btn-primary" href="{{route('users.create')}}">
 				<i class="fas fa-plus"></i>Adicionar Utilizadores</a>
+			@else
+			<span class="btn btn-primary disable">Adicionar Utilizadores</span>
+			@endcan
             <br><br>
 		</div>
 		<div class="card-body">
@@ -24,6 +28,7 @@
 									<th>Email</th>
 									<th>Função</th>
 									<th>Ações</th>
+									
 								</tr>
 							</thead>
 							<tbody>
@@ -34,12 +39,24 @@
 									<td>{{$user->roleToStr()}}</td>
 									<td nowrap>
 										<a class="btn btn-xs btn-primary btn-p" href="{{route('users.show',$user)}}"><i class="fas fa-eye fa-xs"></i></a>
+										
+										@can("update",$user)
 										<a class="btn btn-xs btn-warning btn-p" href="{{route('users.edit',$user)}}"><i class="fas fa-pen fa-xs"></i></a>
+										@else
+										<span class="btn btn-xs btn-secondary btn-p disabled">
+											<i class="fas fa-pen fa-xs"></i></span>
+										@endcan
+										
+										@can("delete",$user)
 										<form method="POST" action="{{route('users.destroy',$user)}}" role="form" class="inline" onsubmit="return confirm('Tem a certeza de que quer eliminar este utilizador?');">
 											@csrf
 											@method('DELETE')
 											<button type="submit" class="btn btn-xs btn-danger btn-p"><i class="fas fa-trash fa-xs"></i></button>
 										</form>
+										@else
+										<span class="btn btn-xs btn-secondary btn-p disabled">
+										<i class="fas fas fa-trash fa-xs"></i></span>
+										@endcan
 									</td>
 								</tr>
 								@endforeach

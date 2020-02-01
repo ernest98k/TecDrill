@@ -121,7 +121,7 @@
                         <a href="profile.html" class="waves-effect"><i class="fa fa-user fa-fw" aria-hidden="true"></i>Sobre</a>
                     </li>
                     <li>
-                        <a href="basic-table.html" class="waves-effect"><i class="fa fa-id-badge fa-fw" aria-hidden="true"></i>Catálogo</a>
+                        <a href="{{route('products.index')}}" class="waves-effect"><i class="fa fa-id-badge fa-fw" aria-hidden="true"></i>Catálogo</a>
                     </li>
                     <li>
                         <a href="{{route('galerys.index')}}" class="waves-effect"><i class="fa fa-id-badge fa-fw" aria-hidden="true"></i>Galeria</a>

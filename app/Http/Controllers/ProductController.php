@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Product;
 use Illuminate\Http\Request;
+use App\Http\Requests\StoreProductRequest;
+use Illuminate\Support\Facades\Storage;
 
 class ProductController extends Controller
 {
@@ -14,7 +16,8 @@ class ProductController extends Controller
      */
     public function index()
     {
-        //
+        $products=Product::all();
+        return view('products.list', compact('products'));
     }
 
     /**
@@ -24,7 +27,8 @@ class ProductController extends Controller
      */
     public function create()
     {
-        //
+        $product = new Product;
+        return view('products.add', compact('product'));
     }
 
     /**
@@ -33,9 +37,26 @@ class ProductController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(StoreProductRequest $request)
     {
-        //
+        $fields=$request->validated();
+
+        $filenameWithExt = $request->file('name')->getClientOriginalName();
+
+        $filename = pathinfo($filenameWithExt, PATHINFO_FILENAME);
+
+        $extension = $request->file('name')->getClientOriginalExtension();
+
+        $fileNameToStore = $filename.'_'.time().'.'.$extension;
+
+        $path = $request->file('name')->storeAs('public/catalogo', $fileNameToStore);
+
+        //Create Post
+        $product = new Product;
+        $product->fill($fields);
+        $product->name=$fileNameToStore;
+        $product->save();
+        return redirect()->route('products.index')->with('success', 'Ficheiro inserido com sucesso');
     }
 
     /**

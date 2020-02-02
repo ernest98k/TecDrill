@@ -14,7 +14,7 @@
 Route::get('/', function () {
     return view('index');
 })->name('index');
-Route::get('/contact', function () {
+Route::get('/contacto', function () {
     return view('contact');
 })->name('contact');
 Route::get('/sobre', function () {
@@ -46,12 +46,13 @@ Route::get('/catalogo', function () {
     return view('product');
 })->name('product');
 
-Route::get('/product','ProductController@listProduct')->name('gm.product');
+Route::get('/catalogo','ProductController@listProduct')->name('product');
 
 
 Route::get('/opinioes','OpinionController@opinions')->name('gm.opinions');
 Route::get('/faq','FaqController@faqs')->name('gm.faqs');
 Route::post('/recrutamento','RecruitmentController@store');
+Route::post('/contacto','ContactController@store');
 
 Route::group(['middleware' => ['auth', 'verified']], function () {
     Route::post('/users/{user}/send_reactivate_mail',"UserController@send_reactivate_email")->name('users.sendActivationEmail');
@@ -60,6 +61,7 @@ Route::group(['middleware' => ['auth', 'verified']], function () {
     Route::resource('products', 'ProductController');
     Route::resource('services', 'ServiceController');
     Route::resource('recruitments', 'RecruitmentController');
+    Route::resource('contacts', 'ContactController');
 });
 
 Route::resource('opinions', 'OpinionController');

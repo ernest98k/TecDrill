@@ -133,7 +133,7 @@
                         <a href="{{route('recruitments.index')}}" class="waves-effect"><i class="fa fa-user fa-fw" aria-hidden="true"></i>Recrutamento</a>
                     </li>
                     <li>
-                        <a href="404.html" class="waves-effect"><i class="fa fa-id-badge fa-fw" aria-hidden="true"></i>Contactos</a>
+                    <a href="{{route('contacts.index')}}" class="waves-effect"><i class="fa fa-id-badge fa-fw" aria-hidden="true"></i>Contactos</a>
                     </li>
                     <li>
                         <a href="{{route('opinions.index')}}" class="waves-effect"><i class="fa fa-comments fa-fw" aria-hidden="true"></i>Opiniões</a>

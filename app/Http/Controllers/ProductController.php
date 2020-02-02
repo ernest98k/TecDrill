@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Product;
 use Illuminate\Http\Request;
 use App\Http\Requests\StoreProductRequest;
+use App\Http\Requests\UpdateProductRequest;
 use Illuminate\Support\Facades\Storage;
 
 class ProductController extends Controller
@@ -78,7 +79,7 @@ class ProductController extends Controller
      */
     public function edit(Product $product)
     {
-        //
+        return view('products.edit', compact('product'));
     }
 
     /**
@@ -88,9 +89,34 @@ class ProductController extends Controller
      * @param  \App\Product  $product
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Product $product)
+    public function update(UpdateProductRequest $request, Product $product)
     {
-        //
+        $fields=$request->validated();
+
+        if($request->hasFile('name')){
+            $filenameWithExt = $request->file('name')->getClientOriginalName();
+
+            $filename = pathinfo($filenameWithExt, PATHINFO_FILENAME);
+
+            $extension = $request->file('name')->getClientOriginalExtension();
+
+            $fileNameToStore = $filename.''.time().'.'.$extension;
+
+            $path = $request->file('name')->storeAs('public/catalogo', $fileNameToStore);
+
+            Storage::delete('public/catalogo/'.$product->name);
+        }
+
+
+
+        $product->fill($fields);
+        if($request->hasFile('name')){
+            $product->name = $fileNameToStore;
+        }
+
+
+        $product->save();
+        return redirect()->route('products.index')->with('success', 'Catálogo alterada com sucesso');
     }
 
     /**
@@ -101,7 +127,9 @@ class ProductController extends Controller
      */
     public function destroy(Product $product)
     {
-        //
+        Storage::delete('public/catalogo/'.$product->name); //public para eliminar
+        $product->delete();
+        return redirect('products')->with('success','Catálogo removido');
     }
     public function listProduct(){ 
         $products=Product::all();

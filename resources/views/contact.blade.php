@@ -42,7 +42,8 @@
         <div class="col-sm-12 section-t8">
           <div class="row">
             <div class="col-md-7">
-              <form class="form-a contactForm" action="" method="post" role="form">
+              <form class="form-a contactForm" action="{{ action('ContactController@store')}}" method="post" enctype="multipart/form-data">
+                @csrf
                 <div id="sendmessage">A Mensagem foi enviada com Sucesso!</div>
                 <div id="errormessage"></div>
                 <div class="row">

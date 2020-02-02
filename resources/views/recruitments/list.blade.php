@@ -33,7 +33,7 @@
 									<td>{{$recruitment->email}}</td>
                                     <td>{{$recruitment->phone}}</td>
                                     <td>{{$recruitment->observation}}</td>
-                                    <td><a class="btn btn-md btn-primary btn-p" href="{{ asset('/storage/cv/'.$recruitment->cv.'')}}"><i class="fas fa-eye fa-xs"></i></a></td>
+                                    <td><a class="btn btn-md btn-primary btn-p" href="{{ asset('storage/cv/'.$recruitment->cv.'')}}"><i class="fas fa-eye fa-xs"></i></a></td>
 									<td nowrap>
                                     <a class="btn btn-md btn-info btn-p" href="{{asset('mailto:'.$recruitment->email.'?Subject=Recrutamento%20Tecdrill')}}"><i class="far fa-envelope"></i></a>
                                     <form method="POST" action="{{route('recruitments.destroy',$recruitment)}}" role="form" class="inline" onsubmit="return confirm('Tem a certeza de que quer eliminar este recrutamento?');">

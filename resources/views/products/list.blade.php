@@ -30,7 +30,7 @@
 									<td>{{$product->name}}</td>
 									<td style="white-space:nowrap"
 									<div class="row">
-										<a class="btn btn-ls btn-primary btn-p; col-xs-2" href="{{route('products.show',$product)}}"><i class="fas fa-eye fa-xs"></i></a>
+										<a class="btn btn-ls btn-primary btn-p; col-xs-2" href="{{ asset('storage/catalogo/'.$product->name.'')}}"><i class="fas fa-eye fa-xs"></i></a>
 										<a class="btn btn-ls btn-warning btn-p; col-xs-2" href="{{route('products.edit',$product)}}"><i class="fas fa-pen fa-xs"></i></a>
 										<form method="POST" action="{{route('products.destroy',$product)}}" role="form" class="inline" onsubmit="return confirm('Tem a certeza de que quer eliminar este ficheiro?');">
 											@csrf

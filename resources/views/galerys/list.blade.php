@@ -31,7 +31,6 @@
 									<td>{{$galery->title}}</td>
 									<td>{{$galery->description}}</td>
 									<td nowrap>
-										<a class="btn btn-ls btn-primary btn-p" href="{{route('galerys.show',$galery)}}"><i class="fas fa-eye fa-xs"></i></a>
 										<a class="btn btn-ls btn-warning btn-p" href="{{route('galerys.edit',$galery)}}"><i class="fas fa-pen fa-xs"></i></a>
 										<form method="POST" action="{{route('galerys.destroy',$galery)}}" role="form" class="inline" onsubmit="return confirm('Tem a certeza de que quer eliminar esta imagem?');">
 											@csrf

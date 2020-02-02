@@ -103,4 +103,8 @@ class ProductController extends Controller
     {
         //
     }
+    public function listProduct(){ 
+        $products=Product::all();
+        return view('product', compact("products"));
+    }
 }

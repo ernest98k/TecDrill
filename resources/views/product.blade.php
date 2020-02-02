@@ -51,7 +51,9 @@
               </div>
               <div class="amenities-list color-text-a">
                 <ul class="list- no-margin">
-                  <li><a href="{{ asset('/brocas_canhaoCP.pdf') }}">Brocas Canhão - Catálogo e Preçário</a></li>
+                @foreach($products as $product)
+                  <li><td><a href="{{ asset('/storage/catalogo/'.$product->name) }}">{{$product->name}}</a></td></li>
+                  @endforeach
                 </ul>
               </div>
               <div class="row section-t3">

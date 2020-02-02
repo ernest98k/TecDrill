@@ -46,6 +46,7 @@ Route::get('/catalogo', function () {
     return view('product');
 })->name('product');
 
+Route::get('/product','ProductController@listProduct')->name('gm.product');
 
 
 Route::get('/opinioes','OpinionController@opinions')->name('gm.opinions');

@@ -11,7 +11,7 @@
 
 			<div><strong>Email:</strong> {{$contact->email}}</div><br>
 			<div><strong>Tópico:</strong> {{$contact->topic}} </div><br>
-      <div><strong>Mensagem:</strong> {{$contact->message}} </div>
+      <div style="word-wrap: break-word;width: 400px;"><strong>Mensagem:</strong> {{$contact->message}} </div>
 		</div>
 	</div>
 </div>

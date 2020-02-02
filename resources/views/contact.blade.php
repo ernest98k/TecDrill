@@ -42,10 +42,8 @@
         <div class="col-sm-12 section-t8">
           <div class="row">
             <div class="col-md-7">
-              <form class="form-a contactForm" action="{{ action('ContactController@store')}}" method="post" enctype="multipart/form-data">
+              <form class="form-a" action="{{ action('ContactController@store')}}" method="post" enctype="multipart/form-data">
                 @csrf
-                <div id="sendmessage">A Mensagem foi enviada com Sucesso!</div>
-                <div id="errormessage"></div>
                 <div class="row">
                   <div class="col-md-6 mb-3">
                     <div class="form-group">
@@ -61,7 +59,7 @@
                   </div>
                   <div class="col-md-12 mb-3">
                     <div class="form-group">
-                      <input type="text" name="subject" class="form-control form-control-lg form-control-a" placeholder="Tópico" data-rule="minlen:4" data-msg="Por favor digite pelo menos 8 caracteres">
+                      <input type="text" name="topic" class="form-control form-control-lg form-control-a" placeholder="Tópico" data-rule="minlen:4" data-msg="Por favor digite pelo menos 8 caracteres">
                       <div class="validation"></div>
                     </div>
                   </div>

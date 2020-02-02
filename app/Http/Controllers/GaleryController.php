@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Galery;
 use Illuminate\Http\Request;
 use App\Http\Requests\StoreGaleryRequest;
+use App\Http\Requests\UpdateGaleryRequest;
 use Illuminate\Support\Facades\Storage;
 
 class GaleryController extends Controller
@@ -42,17 +43,17 @@ class GaleryController extends Controller
          
         $fields=$request->validated();
 
-        $filenameWithExt = $request->file('image')->getClientOriginalName();
+        $filenameWithExt = $request->file('title')->getClientOriginalName();
 
         $filename = pathinfo($filenameWithExt, PATHINFO_FILENAME);
 
-        $extension = $request->file('image')->getClientOriginalExtension();
+        $extension = $request->file('title')->getClientOriginalExtension();
 
         $fileNameToStore = $filename.'_'.time().'.'.$extension;
 
-        $path = $request->file('image')->storeAs('public/galeria', $fileNameToStore);
+        $path = $request->file('title')->storeAs('public/galeria', $fileNameToStore);
 
-        //Create Post
+        //Create Galery
         $galery = new Galery;
         $galery->fill($fields);
         $galery->title=$fileNameToStore;
@@ -79,7 +80,7 @@ class GaleryController extends Controller
      */
     public function edit(Galery $galery)
     {
-        //
+        return view('galerys.edit', compact('galery'));
     }
 
     /**
@@ -89,9 +90,31 @@ class GaleryController extends Controller
      * @param  \App\Galery  $galery
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Galery $galery)
+    public function update(UpdateGaleryRequest $request, Galery $galery)
     {
-        //
+        $fields=$request->validated();
+
+        if($request->hasFile('title')){
+            $filenameWithExt = $request->file('title')->getClientOriginalName();
+
+            $filename = pathinfo($filenameWithExt, PATHINFO_FILENAME);
+
+            $extension = $request->file('title')->getClientOriginalExtension();
+
+            $fileNameToStore = $filename.'_'.time().'.'.$extension;
+
+            $path = $request->file('title')->storeAs('public/galeria', $fileNameToStore);
+        }
+        
+
+        //Create Galery
+        $galery->fill($fields);
+        if($request->hasFile('title')){
+            $galery->title = $fileNameToStore;
+        }
+        $galery->save();
+
+        return redirect()->route('galerys.index')->with('success', 'Imagem alterada com sucesso');
     }
 
     /**

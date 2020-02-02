@@ -31,9 +31,9 @@
 									<td>{{$galery->title}}</td>
 									<td>{{$galery->description}}</td>
 									<td nowrap>
-										<a class="btn btn-ls btn-primary btn-p" href="{{route('users.show',$galery)}}"><i class="fas fa-eye fa-xs"></i></a>
-										<a class="btn btn-ls btn-warning btn-p" href="{{route('users.edit',$galery)}}"><i class="fas fa-pen fa-xs"></i></a>
-										<form method="POST" action="{{route('users.destroy',$galery)}}" role="form" class="inline" onsubmit="return confirm('Tem a certeza de que quer eliminar esta imagem?');">
+										<a class="btn btn-ls btn-primary btn-p" href="{{route('galerys.show',$galery)}}"><i class="fas fa-eye fa-xs"></i></a>
+										<a class="btn btn-ls btn-warning btn-p" href="{{route('galerys.edit',$galery)}}"><i class="fas fa-pen fa-xs"></i></a>
+										<form method="POST" action="{{route('galerys.destroy',$galery)}}" role="form" class="inline" onsubmit="return confirm('Tem a certeza de que quer eliminar esta imagem?');">
 											@csrf
 											@method('DELETE')
 											<button type="submit" class="btn btn-ls btn-danger btn-p"><i class="fas fa-trash fa-xs"></i></button>

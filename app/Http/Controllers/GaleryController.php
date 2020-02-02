@@ -69,7 +69,7 @@ class GaleryController extends Controller
      */
     public function show(Galery $galery)
     {
-        //
+        return view('galerys.show',compact('galery'));
     }
 
     /**
@@ -104,13 +104,15 @@ class GaleryController extends Controller
             $fileNameToStore = $filename.'_'.time().'.'.$extension;
 
             $path = $request->file('title')->storeAs('public/galeria', $fileNameToStore);
+            
+            Storage::delete('public/galeria/'.$galery->title);
         }
         
 
         //Create Galery
         $galery->fill($fields);
         if($request->hasFile('title')){
-            $galery->title = $fileNameToStore;
+            $galery->title = $fileNameToStore;            
         }
         $galery->save();
 
@@ -124,7 +126,15 @@ class GaleryController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function destroy(Galery $galery)
+    {        
+        Storage::delete('public/galeria/'.$galery->title);
+        $galery->delete();
+        return redirect()->route('galerys.index')->with('success', 'Imagem eliminada com sucesso!');
+    }
+
+    public function mostrarimagens (Galery $galery)
     {
-        //
+        $galerys=Galery::all();
+        return view('galery', compact('galerys'));
     }
 }

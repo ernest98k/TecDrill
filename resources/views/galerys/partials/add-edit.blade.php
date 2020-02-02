@@ -2,7 +2,6 @@
 <div class="form-group">
     <label for="inputImage">Imagem</label>
     <input type="file" class="form-control-file" name="title" id="inputTitle" aria-describedby="fileHelp" value="{{$galery->title}}"/>
-    {{$galery->title}}
 </div>
 <br>
 <div class="form-group">

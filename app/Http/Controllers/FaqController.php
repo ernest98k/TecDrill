@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use App\Http\Requests\StoreFaqRequest;
 use Illuminate\Support\Facades\Storage;
+use App\Http\Requests\UpdateFaqRequest;
 
 class FaqController extends Controller
 {
@@ -18,7 +19,7 @@ class FaqController extends Controller
     public function index()
     {
       $faqs = Faq::all();
-      return view('faq', compact('faqs'));
+      return view('faqs.list', compact('faqs'));
     }
 
     /**
@@ -28,8 +29,8 @@ class FaqController extends Controller
      */
     public function create()
     {
-      $faq = new Faq;
-      return view('faq',compact("faq"));
+      $faqs = new Faq;
+      return view('faqs.add',compact("faqs"));
     }
 
     /**
@@ -44,7 +45,7 @@ class FaqController extends Controller
       $faq->fill($request->all());
       $faq->save();
 
-      return redirect()->route('faq')->with('success', 'Faq inserida com sucesso');
+      return redirect()->route('faqs.index')->with('success', 'Faq inserida com sucesso');
     }
 
     /**
@@ -55,7 +56,7 @@ class FaqController extends Controller
      */
     public function show(Faq $faq)
     {
-        return view('faq',compact('faq'));
+        return view('faqs.show',compact('faq'));
     }
 
     /**
@@ -66,7 +67,7 @@ class FaqController extends Controller
      */
     public function edit(Faq $faq)
     {
-        //
+      return view('faqs.edit', compact('faq'));
     }
 
     /**
@@ -78,7 +79,10 @@ class FaqController extends Controller
      */
     public function update(Request $request, Faq $faq)
     {
-        //
+      $fields = $request->validated();
+      $faq->fill($fields);
+      $faq->save();
+      return redirect()->route('faqs.index')->with('success', 'User successfully updated');
     }
 
     /**
@@ -89,7 +93,8 @@ class FaqController extends Controller
      */
     public function destroy(Faq $faq)
     {
-        //
+      $faq->delete();
+      return redirect()->route('faqs.index')->with('success', 'FAQ eliminada com sucesso');
     }
 
     public function faqs()

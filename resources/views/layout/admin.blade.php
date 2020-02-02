@@ -74,7 +74,7 @@
                             <img src="{{asset('vendor/bo/images/logo-text.png')}}" alt="home" class="dark-logo" />
                             <!--This is light logo text-->
                             <img src="{{asset('vendor/bo/images/logo-text.png')}}" alt="home" class="light-logo" />
-                        </span> 
+                        </span>
                     </a>
                 </div>
                 <!-- /Logo -->
@@ -136,10 +136,10 @@
                         <a href="404.html" class="waves-effect"><i class="fa fa-id-badge fa-fw" aria-hidden="true"></i>Contactos</a>
                     </li>
                     <li>
-                        <a href="404.html" class="waves-effect"><i class="fa fa-comments fa-fw" aria-hidden="true"></i>Opiniões</a>
+                        <a href="{{route('opinions.index')}}" class="waves-effect"><i class="fa fa-comments fa-fw" aria-hidden="true"></i>Opiniões</a>
                     </li>
                     <li>
-                        <a href="404.html" class="waves-effect"><i class="fa fa-id-badge fa-fw" aria-hidden="true"></i>FAQ's</a>
+                        <a href="{{route('faqs.index')}}" class="waves-effect"><i class="fa fa-id-badge fa-fw" aria-hidden="true"></i>FAQ's</a>
                     </li>
                     <li>
                         <a href="{{route('users.index')}}" class="waves-effect"><i class="fa fa-user fa-fw" aria-hidden="true"></i>Utilizadores</a>
@@ -147,18 +147,18 @@
 
                 </ul>
             </div>
-            
+
         </div>
         <!-- ============================================================== -->
         <!-- End Left Sidebar -->
         <!-- ============================================================== -->
 
-    
-  
+
+
         <!-- ============================================================== -->
         <!-- Page Content -->
         <!-- ============================================================== -->
-   
+
 <div id="page-wrapper">
     @if ($errors->any())
         @include ('partials.errors')

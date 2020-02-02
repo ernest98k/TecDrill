@@ -53,8 +53,7 @@ Route::get('/faq','FaqController@faqs')->name('gm.faqs');
 Route::post('/recrutamento','RecruitmentController@store');
 
 Route::group(['middleware' => ['auth', 'verified']], function () {
-    Route::post('/users/{user}/send_reactivate_mail',
-        "UserController@send_reactivate_email")->name('users.sendActivationEmail');
+    Route::post('/users/{user}/send_reactivate_mail',"UserController@send_reactivate_email")->name('users.sendActivationEmail');
     Route::resource('users', 'UserController');
     Route::resource('galerys', 'GaleryController');
     Route::resource('products', 'ProductController');
@@ -62,8 +61,10 @@ Route::group(['middleware' => ['auth', 'verified']], function () {
     Route::resource('recruitments', 'RecruitmentController');
 });
 
+Route::resource('opinions', 'OpinionController');
 Route::resource('opinion', 'OpinionController');
 Route::resource('faqs', 'FaqController');
+
 
 Route::get('/admin', 'HomeController@index')->name('admin');
 

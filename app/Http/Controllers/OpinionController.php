@@ -19,7 +19,7 @@ class OpinionController extends Controller
     public function index()
     {
       $opinions=Opinion::all();
-      return view('opinion', compact('opinions'));
+      return view('opinions.list', compact('opinions'));
     }
 
     /**
@@ -57,7 +57,8 @@ class OpinionController extends Controller
      */
     public function show(Opinion $opinion)
     {
-        return view('opinion',compact('opinion'));
+
+        return view('opinions.show',compact('opinion'));
     }
 
     /**
@@ -89,15 +90,17 @@ class OpinionController extends Controller
      * @param  \App\Opinion  $opinion
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Opinion $opinion)
-    {
-        //
-    }
 
     public function opinions()
     {
      $opinions = Opinion::orderBy("created_at")->paginate('4');
      return view('opinion',compact('opinions'));
-   }
+    }
+
+    public function destroy(Opinion $opinion)//caso haja problemas por id
+    {
+        $opinion->delete();
+        return redirect()->route('opinions.index')->with('success', 'Opinião eliminada com sucesso');
+    }
 
 }

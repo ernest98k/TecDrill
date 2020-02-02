@@ -49,6 +49,7 @@ Route::get('/catalogo', function () {
 Route::get('/catalogo','ProductController@listProduct')->name('product');
 
 
+Route::get('/galeria','GaleryController@mostrarimagens')->name('galery');
 Route::get('/opinioes','OpinionController@opinions')->name('gm.opinions');
 Route::get('/faq','FaqController@faqs')->name('gm.faqs');
 Route::post('/recrutamento','RecruitmentController@store');

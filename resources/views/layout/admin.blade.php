@@ -118,16 +118,10 @@
                         <a href="{{route('admin')}}" class="waves-effect"><i class="fa fa-clock-o fa-fw" aria-hidden="true"></i>Dashboard</a>
                     </li>
                     <li>
-                        <a href="profile.html" class="waves-effect"><i class="fa fa-user fa-fw" aria-hidden="true"></i>Sobre</a>
-                    </li>
-                    <li>
                         <a href="{{route('products.index')}}" class="waves-effect"><i class="fa fa-id-badge fa-fw" aria-hidden="true"></i>Catálogo</a>
                     </li>
                     <li>
                         <a href="{{route('galerys.index')}}" class="waves-effect"><i class="fa fa-id-badge fa-fw" aria-hidden="true"></i>Galeria</a>
-                    </li>
-                    <li>
-                        <a href="map-google.html" class="waves-effect"><i class="fa fa-id-badge fa-fw" aria-hidden="true"></i>Serviços</a>
                     </li>
                     <li>
                         <a href="{{route('recruitments.index')}}" class="waves-effect"><i class="fa fa-user fa-fw" aria-hidden="true"></i>Recrutamento</a>

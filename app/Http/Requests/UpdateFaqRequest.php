@@ -28,11 +28,5 @@ class UpdateFaqRequest extends FormRequest
                   "answer" => 'required'
               ];
     }
-    public function messages()
-       {
-       return [
-       'question.regex' => 'Necessita de escrever algo'
-       ];
-       }
 
 }

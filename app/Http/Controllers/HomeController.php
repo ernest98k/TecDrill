@@ -2,6 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\User;
+use App\Recruitment;
+use App\Opinion;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -23,6 +26,10 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('boindex');
+        $users = User::all();
+        $recruitments=Recruitment::orderBy('id', 'DESC')->take(3)->get();
+        $opinions=Opinion::orderBy('id', 'DESC')->take(3)->get();
+
+        return view('boindex', compact("users","recruitments","opinions"));
     }
 }

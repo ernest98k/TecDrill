@@ -16,34 +16,34 @@
         <div class="row">
             <div class="col-lg-4 col-sm-6 col-xs-12">
                 <div class="white-box analytics-info">
-                    <h3 class="box-title">Total Visitas</h3>
+                    <h3 class="box-title">Total Utilizadores</h3>
                     <ul class="list-inline two-part">
                         <li>
                             <div id="sparklinedash"></div>
                         </li>
-                        <li class="text-right"><i class="ti-arrow-up text-success"></i> <span class="counter text-success">0</span></li>
+                        <li class="text-right"><i class="ti-arrow-up text-success"></i> <span class="counter text-success">{{count($users)}}</span></li>
                     </ul>
                 </div>
             </div>
             <div class="col-lg-4 col-sm-6 col-xs-12">
                 <div class="white-box analytics-info">
-                    <h3 class="box-title">Total Visita Mensal</h3>
+                    <h3 class="box-title">Total Recrutamentos</h3>
                     <ul class="list-inline two-part">
                         <li>
                             <div id="sparklinedash2"></div>
                         </li>
-                        <li class="text-right"><i class="ti-arrow-up text-purple"></i> <span class="counter text-purple">0</span></li>
+                        <li class="text-right"><i class="ti-arrow-up text-purple"></i> <span class="counter text-purple">{{count($recruitments)}}</span></li>
                     </ul>
                 </div>
             </div>
             <div class="col-lg-4 col-sm-6 col-xs-12">
                 <div class="white-box analytics-info">
-                    <h3 class="box-title">Visitante Único</h3>
+                    <h3 class="box-title">Total Opiniões</h3>
                     <ul class="list-inline two-part">
                         <li>
                             <div id="sparklinedash3"></div>
                         </li>
-                        <li class="text-right"><i class="ti-arrow-up text-info"></i> <span class="counter text-info">0</span></li>
+                        <li class="text-right"><i class="ti-arrow-up text-info"></i> <span class="counter text-info">{{count($opinions)}}</span></li>
                     </ul>
                 </div>
             </div>
@@ -53,7 +53,7 @@
         <!-- ============================================================== -->
         <!-- table -->
         <!-- ============================================================== -->
-        <div class="row">
+        <!-- <div class="row">
             <div class="col-md-12 col-lg-12 col-sm-12">
                 <div class="white-box">
                     <div class="col-md-3 col-sm-4 col-xs-6 pull-right">
@@ -106,7 +106,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
         <!-- ============================================================== -->
         <!-- chat-listing & recent comments -->
         <!-- ============================================================== -->
@@ -115,26 +115,16 @@
             <div class="col-md-12 col-lg-8 col-sm-12">
                 <div class="white-box">
                     <h3 class="box-title">Recrutamento Recente</h3>
-                    <div class="comment-center p-t-10">
-                        <div class="comment-body">
-                            <div class="mail-contnet">
-                                <h5>Gonçalo Rito</h5><span class="time">10:20    29  Dezembro 2019</span>
-                                <br/><span class="mail-desc">Donec ac condimentum massa. Etiam pellentesque pretium lacus. Phasellus ultricies dictum suscipit. Aenean commodo dui pellentesque molestie feugiat. Aenean commodo dui pellentesque molestie feugiat</span> <a href="javacript:void(0)" class="btn btn btn-rounded btn-default btn-outline m-r-5"><i class="ti-check text-success m-r-5"></i>Ver Mais</a>
+                        @foreach($recruitments as $recruitment)
+                            <div class="comment-center p-t-10">
+                                <div class="comment-body">
+                                    <div class="mail-contnet">
+                                        <h5>{{$recruitment->name}}</h5><span class="time">{{$recruitment->email}}</span>
+                                        <br/><span class="mail-desc">{{$recruitment->observation}}</span> <a href="{{route('recruitments.index')}}" class="btn btn btn-rounded btn-default btn-outline m-r-5"><i class="ti-check text-success m-r-5"></i>Ver Mais</a>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                        <div class="comment-body">
-                            <div class="mail-contnet">
-                                <h5>Ricardo Dias</h5><span class="time">21:35    05  Janeiro 2020</span>
-                                <br/><span class="mail-desc">Donec ac condimentum massa. Etiam pellentesque pretium lacus. Phasellus ultricies dictum suscipit. Aenean commodo dui pellentesque molestie feugiat. Aenean commodo dui pellentesque molestie feugiat</span> <a href="javacript:void(0)" class="btn btn btn-rounded btn-default btn-outline m-r-5"><i class="ti-check text-success m-r-5"></i>Ver Mais</a>
-                            </div>
-                        </div>
-                        <div class="comment-body b-none">
-                            <div class="mail-contnet">
-                                <h5>Dinis Mota</h5><span class="time">13:20    06  Janeiro 2020</span>
-                                <br/><span class="mail-desc">Donec ac condimentum massa. Etiam pellentesque pretium lacus. Phasellus ultricies dictum suscipit. Aenean commodo dui pellentesque molestie feugiat. Aenean commodo dui pellentesque molestie feugiat</span> <a href="javacript:void(0)" class="btn btn btn-rounded btn-default btn-outline m-r-5"><i class="ti-check text-success m-r-5"></i>Ver Mais</a>
-                            </div>
-                        </div>
-                    </div>
+                        @endforeach                    
                 </div>
             </div>
             <div class="col-lg-4 col-md-6 col-sm-12">
@@ -146,25 +136,17 @@
                             </div>
                             <div class="panel-body">
                                 <ul class="chatonline">
-                                <li>
-                                    <div class="comment-center p-t-10">
-                                        <div class="comment-body">
-                                        <div class="mail-contnet">
-                                            <h5>Rodrigo Matias</h5><span class="time">10:20    29  Dezembro 2019</span>
-                                            <br/><span class="mail-desc">Donec ac condimentum massa. Etiam pellentesque pretium lacus. Phasellus ultricies dictum suscipit. Aenean commodo dui pellentesque molestie feugiat. Aenean commodo dui pellentesque molestie feugiat</span> <a href="javacript:void(0)" class="btn btn btn-rounded btn-default btn-outline m-r-5"><i class="ti-check text-success m-r-5"></i>Ver Mais</a>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="comment-center p-t-10">
-                                        <div class="comment-body">
-                                        <div class="mail-contnet">
-                                            <h5>Duarte Leocadio</h5><span class="time">10:20    29  Dezembro 2019</span>
-                                            <br/><span class="mail-desc">Donec ac condimentum massa. Etiam pellentesque pretium lacus. Phasellus ultricies dictum suscipit. Aenean commodo dui pellentesque molestie feugiat. Aenean commodo dui pellentesque molestie feugiat</span> <a href="javacript:void(0)" class="btn btn btn-rounded btn-default btn-outline m-r-5"><i class="ti-check text-success m-r-5"></i>Ver Mais</a>
-                                        </div>
-                                    </div>
-                                </li>
-                                    
+                                    @foreach($opinions as $opinion)
+                                        <li>
+                                            <div class="comment-center p-t-10">
+                                                <div class="comment-body">
+                                                <div class="mail-contnet">                                            
+                                                    <h5>{{$opinion->name}}</h5><span class="time">{{$opinion->email}}</span>
+                                                    <br/><span class="mail-desc">{{$opinion->opinion}}</span> <a href="{{route('opinions.index')}}" class="btn btn btn-rounded btn-default btn-outline m-r-5"><i class="ti-check text-success m-r-5"></i>Ver Mais</a>
+                                                </div>
+                                            </div>
+                                        </li>                                
+                                    @endforeach                                    
                                 </ul>
                             </div>
                         </div>

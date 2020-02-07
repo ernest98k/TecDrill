@@ -10,7 +10,7 @@
         </div>
         <div class="card-body">
 
-			<form method="POST" action="{{route('faqs.edit',$faq)}}" class="form-group">
+			<form method="POST" action="{{route('faqs.update',$faq)}}" class="form-group">
 				@csrf
 				@method("PUT")
 				@include('faqs.partials.add-edit')

@@ -29,8 +29,8 @@ class FaqController extends Controller
      */
     public function create()
     {
-      $faqs = new Faq;
-      return view('faqs.add',compact("faqs"));
+      $faq = new Faq;
+      return view('faqs.add',compact("faq"));
     }
 
     /**
@@ -79,8 +79,9 @@ class FaqController extends Controller
      */
     public function update(Request $request, Faq $faq)
     {
-      $fields = $request->validated();
-      $faq->fill($fields);
+      //dd($faq);
+
+      $faq->fill($request->all());
       $faq->save();
       return redirect()->route('faqs.index')->with('success', 'User successfully updated');
     }

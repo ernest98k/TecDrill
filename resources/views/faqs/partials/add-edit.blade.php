@@ -4,5 +4,5 @@
 </div>
 <div class="form-group">
     <label for="inputSpecies">Resposta</label>
-    <textarea class="form-control" name="answer" id="inputAnswer" value="{{old('answer',$faq->answer)}}"></textarea>
+    <textarea class="form-control" name="answer" id="inputAnswer">{{old('answer',$faq->answer)}}</textarea>
 </div>

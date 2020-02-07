@@ -12,7 +12,6 @@
         <div class="col-md-12 col-lg-8">
           <div class="title-single-box">
             <h1 class="title-single">O Nosso Catálogo</h1>
-            <span class="color-text-a">Catálogo</span>
           </div>
         </div>
         <div class="col-md-12 col-lg-4">
@@ -36,7 +35,7 @@
       <div class="row">
         <div class="col-sm-12">
           <div class="row justify-content-between">
-            <div class="col-md-5 col-lg-4">
+            <div class="col-md-5 col-lg-5">
               <div class="property-price d-flex justify-content-center foo">
                 <div class="card-header-c d-flex">
                 </div>
@@ -45,7 +44,7 @@
                 <div class="row section-t3">
                 <div class="col-sm-12">
                   <div class="title-box-d">
-                    <h3 class="title-d">Produção Própria</h3>
+                    <h3 class="title-d">Produção e Representação</h3>
                   </div>
                 </div>
               </div>
@@ -56,20 +55,7 @@
                   @endforeach
                 </ul>
               </div>
-              <div class="row section-t3">
-                <div class="col-sm-12">
-                  <div class="title-box-d">
-                    <h3 class="title-d">Representações</h3>
-                  </div>
-                </div>
-              </div>
-              <div class="amenities-list color-text-a">
-                <ul class="list- no-margin">
-                  <li><a href="{{ asset('/Brocas_fresas_catalogo.pdf') }}">Brocas Fresas - Catálogo</a></li><br>
-                  <li><a href="{{ asset('/Machos_Catalogo.pdf') }}">Machos - Catálogo e Preçário</a></li>
-                </ul>
-              </div>
-              </div>
+             </div>
             </div>
             <div class="col-md-7 col-lg-7 section-md-t3">
               <div class="row">
